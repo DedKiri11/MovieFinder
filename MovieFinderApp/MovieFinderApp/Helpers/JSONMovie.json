@@ -1,0 +1,666 @@
+{
+  "total": 700,
+  "totalPages": 35,
+  "items": [
+    {
+      "kinopoiskId": 5250278,
+      "imdbId": "tt10569934",
+      "nameRu": "Обреченные на славу",
+      "nameEn": null,
+      "nameOriginal": "Those About to Die",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Германия"
+        },
+        {
+          "country": "Италия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 2024,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5250278.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5250278.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": null,
+      "ratingAgeLimits": null
+    },
+    {
+      "kinopoiskId": 5102255,
+      "imdbId": "tt22022452",
+      "nameRu": "Головоломка 2",
+      "nameEn": null,
+      "nameOriginal": "Inside Out 2",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фэнтези"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "ratingKinopoisk": 8.2,
+      "ratingImdb": 7.9,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5102255.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5102255.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Мозг Райли внезапно подвергается капитальному ремонту в тот момент, когда необходимо освободить место для кое-чего совершенно неожиданного: новых эмоций. Радость, Грусть, Гнев, Страх и Отвращение никак не ожидали появления некой Тревожности. И похоже, не только её.",
+      "ratingAgeLimits": null
+    },
+    {
+      "kinopoiskId": 5364334,
+      "imdbId": "tt29191990",
+      "nameRu": "Игры",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "спорт"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 2024,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5364334.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5364334.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/1652588/2a00000190b2df406f7c63f52a36645ca986/orig",
+      "logoUrl": null,
+      "description": "Сына советского функционера после очередного скандала отправляют на исправление в оргкомитет Олимпиады-80, где он начинает работать простым волонтёром. Его начальник — дочь высокопоставленного военного, и она не собирается делать никаких поблажек избалованному парню из богатой семьи. Оказавшись по ту стороны афиши мирового события, он познакомится с разными людьми, которые изменят его взгляды на жизнь — со спортсменами, тренерами и другими волонтёрами. Их глазами он увидит всю драму вокруг подготовки к большому соревнованию, которое было на грани срыва.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 1316601,
+      "imdbId": "tt11198330",
+      "nameRu": "Дом Дракона",
+      "nameEn": null,
+      "nameOriginal": "House of the Dragon",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "ratingKinopoisk": 8.1,
+      "ratingImdb": 8.4,
+      "year": 2022,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1316601.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1316601.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/2385704/2a000001903b50482460552a3eef2d4e5801/orig",
+      "logoUrl": null,
+      "description": "После смерти короля Визериса династия Таргариенов начинает бескомпромиссную борьбу за Железный трон. Предводительницей «черной» ветви становится принцесса Рейнира, а на стороне «зеленой» оказывается ее лучшая подруга и дочь десницы короля Алисента. В битве за престол соперницы заручаются поддержкой неожиданных союзников, плетут интриги — и используют разрушительную мощь драконов.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 1073122,
+      "imdbId": null,
+      "nameRu": "Гадкий я 4",
+      "nameEn": null,
+      "nameOriginal": "Despicable Me 4",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "мультфильм"
+        },
+        {
+          "genre": "семейный"
+        }
+      ],
+      "ratingKinopoisk": 6.8,
+      "ratingImdb": 6.3,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1073122.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1073122.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Грю, Люси и их девочки — Марго, Эдит и Агнес — приветствуют нового члена семьи, Грю-младшего, который намерен мучить своего отца. Грю сталкивается с новым врагом в лице Максима Ле Маля и его роковой подруги Валентины, в связи с чем семья вынуждена бежать.",
+      "ratingAgeLimits": null
+    },
+    {
+      "kinopoiskId": 1334852,
+      "imdbId": null,
+      "nameRu": "Сто лет тому вперёд",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "приключения"
+        }
+      ],
+      "ratingKinopoisk": 7.5,
+      "ratingImdb": 5.9,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1334852.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1334852.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Они живут в разных мирах. Коля Герасимов — в сегодняшней Москве, Алиса Селезнева — на сто лет позже. Коля — обычный парень, ему нет дела до будущего. Алису не отпускает прошлое: она пытается найти маму, которую потеряла, когда была совсем ребенком. Встреча Алисы и Коли станет началом невероятных приключений, в которых им предстоит отвоевать у космических пиратов Вселенную, восстановить ход времени и обрести самое дорогое: любовь и дружбу.",
+      "ratingAgeLimits": "age6"
+    },
+    {
+      "kinopoiskId": 5089025,
+      "imdbId": null,
+      "nameRu": "Водитель-олигарх",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5089025.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5089025.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Тимур Бабурин не знает, что такое ходить на работу. Он сын олигарха, озорной гуляка, прожигатель жизни и отцовских денег. Для развлечения Тимур часто заключает экзотические пари. Например, может выпрыгнуть из вертолета в бассейн. Когда он внезапно становится наследником огромного состояния, бизнес-партнер его отца Антон предлагает ему заманчивый спор, от которого Тимур не в силах отказаться, не зная, что это решение станет судьбоносным.",
+      "ratingAgeLimits": "age12"
+    },
+    {
+      "kinopoiskId": 460586,
+      "imdbId": "tt1190634",
+      "nameRu": "Пацаны",
+      "nameEn": null,
+      "nameOriginal": "The Boys",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": 8.3,
+      "ratingImdb": 8.7,
+      "year": 2019,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/460586.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/460586.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/2419418/2a0000017c0791e438d10a65d3d63c4381b9/orig",
+      "logoUrl": "https://avatars.mds.yandex.net/get-ott/239697/2a00000177bb06c2c5827c6e25944e2f31fb/orig",
+      "description": "Действие сериала разворачивается в мире, где существуют супергерои. Именно они являются настоящими звездами. Их все знают и обожают. Но за идеальным фасадом скрывается гораздо более мрачный мир наркотиков и секса, а большинство героев — в жизни не самые приятные люди. Противостоит им отряд, неофициально известный как «Пацаны».",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 4414587,
+      "imdbId": "tt5177120",
+      "nameRu": "Министерство неджентльменских дел",
+      "nameEn": null,
+      "nameOriginal": "The Ministry of Ungentlemanly Warfare",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        },
+        {
+          "country": "Турция"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "комедия"
+        },
+        {
+          "genre": "военный"
+        },
+        {
+          "genre": "история"
+        }
+      ],
+      "ratingKinopoisk": 7.3,
+      "ratingImdb": 6.9,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/4414587.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/4414587.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/224348/2a0000018f3e89a200cf1fd5a46d92eb7fc5/orig",
+      "logoUrl": null,
+      "description": "1942 год, Великобритания. Они — лучшие из лучших. Отпетые авантюристы и первоклассные спецы, привыкшие действовать в одиночку. Но когда на кону стоит судьба всего мира, им приходится объединиться в сверхсекретное боевое подразделение и отправиться на выполнение дерзкой миссии против нацистов. Теперь их дело — война, и вести они её будут совершенно не по-джентльменски.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 5249455,
+      "imdbId": "tt27114092",
+      "nameRu": "Майор Гром: Игра",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "боевик"
+        }
+      ],
+      "ratingKinopoisk": 7.8,
+      "ratingImdb": 6.6,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5249455.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5249455.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/224348/2a0000018ef405da511b723784ddfb1fcded/orig",
+      "logoUrl": null,
+      "description": "Майор полиции Игорь Гром известен всему Санкт-Петербургу пробивным характером и непримиримой позицией по отношению к преступникам всех мастей. Неимоверная сила, аналитический склад ума и неподкупность — всё это делает майора Грома самым настоящим супергероем. Его жизнь идеальна: днём он ловит преступников вместе с напарником Димой Дубиным, а вечера проводит в компании журналистки Юлии Пчёлкиной. Полную идиллию прерывает появление в городе таинственного злодея, называющего себя Призраком. Он предлагает Грому сыграть в опасную игру, ставка в которой — жизни обычных людей.",
+      "ratingAgeLimits": "age16"
+    },
+    {
+      "kinopoiskId": 1008444,
+      "imdbId": "tt6263850",
+      "nameRu": "Дэдпул и Росомаха",
+      "nameEn": null,
+      "nameOriginal": "Deadpool & Wolverine",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "фантастика"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": null,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1008444.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1008444.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Уэйд Уилсон попадает в организацию «Управление временными изменениями», что вынуждает его вернуться к своему альтер-эго Дэдпулу и изменить историю с помощью Росомахи.",
+      "ratingAgeLimits": null
+    },
+    {
+      "kinopoiskId": 1209071,
+      "imdbId": null,
+      "nameRu": "Другие",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "ratingKinopoisk": 7.3,
+      "ratingImdb": null,
+      "year": 2018,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1209071.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1209071.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "1950-е годы. Бездетная пара берет из детского дома маленькую девочку. Скоро новоиспеченные родители обнаруживают, что им достался необычный ребенок - из тех, кого сегодня называют экстрасенсами. Дочь доставляет родителям массу проблем, к которым те совершенно не готовы. Неожиданно возвращается из сталинских лагерей родная мать девочки, тоже обладающая паранормальными способностями. Она хочет забрать ребенка, но получает отказ. Сотрудник госбезопасности Гринёв обещает Вале вернуть дочь, если она поработает на разведку.",
+      "ratingAgeLimits": "age12"
+    },
+    {
+      "kinopoiskId": 5388902,
+      "imdbId": null,
+      "nameRu": "На автомате",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": 7.4,
+      "ratingImdb": 6.4,
+      "year": 2024,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5388902.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5388902.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/1534341/2a0000018f385347a05d3c54cfcc4d62c142/orig",
+      "logoUrl": null,
+      "description": "Каждый день братьев-подростков Ромы и Жени проходит одинаково, на автомате: будильник, учёба, сигаретка за гаражом, склад с оружием… стоп, что? Парни решают, что это шанс быстро срубить лёгкие деньги, ведь надо всего-то продать автоматы в даркнете. Но где оружие, там и опасные люди — тут-то и начинается самое интересное. Очень скоро в истории оказываются замешаны все жители городка: мать-одиночка Светлана, хозяин ломбарда Альберт, тату-мастер Лёля, полицейский Басов, его дочь-блогерка Милена, а также столичные бандиты.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 4640303,
+      "imdbId": "tt20765238",
+      "nameRu": "Жизнь по вызову",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        }
+      ],
+      "ratingKinopoisk": 6.8,
+      "ratingImdb": null,
+      "year": 2022,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/4640303.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/4640303.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Александр Шмидт — хозяин элитного эскорт-агентства. Его называют Мэджик — он и его команда способны выполнить практически любое желание. Среди клиентов уважаемые люди: бизнесмены, политики, силовики, общественные деятели. Команда — в лице бывшего бандита по кличке Рыбак и секретаря Галины Михайловны — исполняет любые капризы клиентов. \n\nНо внезапно сказка заканчивается: на Мэджика и его бизнес объявлена охота. В один миг он может потерять все — репутацию, бизнес, семью и даже жизнь. У него есть немного времени, чтобы разобраться, кто стоит за этой атакой, и нанести удар первым.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 5212124,
+      "imdbId": null,
+      "nameRu": "Собиратель душ",
+      "nameEn": null,
+      "nameOriginal": "Longlegs",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Канада"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "детектив"
+        },
+        {
+          "genre": "ужасы"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": 7.4,
+      "year": 2024,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5212124.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5212124.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "По оценкам ФБР, лишь один из пяти серийных убийц попадает в руки закона, а остальные остаются на свободе. Агент Ли Харкер охотится за одним из таких неуловимых чудовищ по прозвищу Собиратель душ. Более десяти лет его жертвами становились целые семьи, члены которых по непонятными причинам убивали друг друга. Чем ближе Харкер подбирается к разгадке личности убийцы, тем отчетливее понимает, что между ними есть связь.",
+      "ratingAgeLimits": null
+    },
+    {
+      "kinopoiskId": 805343,
+      "imdbId": "tt3234122",
+      "nameRu": "Мадам Клико",
+      "nameEn": null,
+      "nameOriginal": "Widow Clicquot",
+      "countries": [
+        {
+          "country": "США"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "биография"
+        }
+      ],
+      "ratingKinopoisk": null,
+      "ratingImdb": 7.8,
+      "year": 2023,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/805343.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/805343.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Всего семь лет после свадьбы Барба-Николь Клико наслаждалась беззаботной жизнью. Но, потеряв горячо любимого мужа, она вынуждена взвалить на свои плечи огромный семейный бизнес, переживающий не лучшие времена.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 1111815,
+      "imdbId": null,
+      "nameRu": "Женское дело",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "криминал"
+        },
+        {
+          "genre": "детектив"
+        }
+      ],
+      "ratingKinopoisk": 7.4,
+      "ratingImdb": null,
+      "year": 2020,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/1111815.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/1111815.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "История двух подруг – сотрудниц отдела по расследованию резонансных преступлений Следственного комитета.\n\nАвторитарная, яркая Ирина Макарова, «сэлф-мэйд вумэн» постбальзаковского возраста и тихая, болезненно замкнутая, совсем молодая генеральская дочка Дина Волошина – им поручено совместное расследование дела об убийстве женщин с особой жестокостью. Ритуальные убийства происходят в разных частях города – очевидно, что сделал это один человек, конченый психопат. Они поймают его, потому что они сами «ненормальные стервы», как считают представители мужской части сотрудников отдела.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 464963,
+      "imdbId": null,
+      "nameRu": "Игра престолов",
+      "nameEn": null,
+      "nameOriginal": "Game of Thrones",
+      "countries": [
+        {
+          "country": "США"
+        },
+        {
+          "country": "Великобритания"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "драма"
+        },
+        {
+          "genre": "мелодрама"
+        },
+        {
+          "genre": "приключения"
+        },
+        {
+          "genre": "боевик"
+        },
+        {
+          "genre": "фэнтези"
+        }
+      ],
+      "ratingKinopoisk": 9,
+      "ratingImdb": 9.2,
+      "year": 2011,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/464963.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/464963.jpg",
+      "coverUrl": "https://avatars.mds.yandex.net/get-ott/200035/2a0000017d5bad9aee6287b862b1414eb223/orig",
+      "logoUrl": "https://avatars.mds.yandex.net/get-ott/239697/2a00000170b077ba4dca5c9303185c5e8003/orig",
+      "description": "К концу подходит время благоденствия, и лето, длившееся почти десятилетие, угасает. Вокруг средоточия власти Семи королевств, Железного трона, зреет заговор, и в это непростое время король решает искать поддержки у друга юности Эддарда Старка. В мире, где все — от короля до наемника — рвутся к власти, плетут интриги и готовы вонзить нож в спину, есть место и благородству, состраданию и любви. Между тем никто не замечает пробуждение тьмы из легенд далеко на Севере — и лишь Стена защищает живых к югу от нее.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 5376927,
+      "imdbId": "tt30430244",
+      "nameRu": "Чистые",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "триллер"
+        },
+        {
+          "genre": "драма"
+        }
+      ],
+      "ratingKinopoisk": 5.9,
+      "ratingImdb": null,
+      "year": 2024,
+      "type": "TV_SERIES",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5376927.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5376927.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Петербург, 1903 год. Мир роскоши и досуга для мужчин, мир страха и подчинения для женщин. Ксения и Стеша работают в подпольном доме терпимости под контролем благообразной и безжалостной дамы. Девушки продают мужчинам тело, чувства, флирт и иллюзию любви. Кажется, кроме красоты у них ничего нет. На самом же деле им доступна тайная сила — чистота души и желание свободы. И этой силой они смогут изменить все.",
+      "ratingAgeLimits": "age18"
+    },
+    {
+      "kinopoiskId": 5368248,
+      "imdbId": null,
+      "nameRu": "Не одна дома",
+      "nameEn": null,
+      "nameOriginal": null,
+      "countries": [
+        {
+          "country": "Россия"
+        }
+      ],
+      "genres": [
+        {
+          "genre": "комедия"
+        }
+      ],
+      "ratingKinopoisk": 6.6,
+      "ratingImdb": null,
+      "year": 2023,
+      "type": "FILM",
+      "posterUrl": "https://kinopoiskapiunofficial.tech/images/posters/kp/5368248.jpg",
+      "posterUrlPreview": "https://kinopoiskapiunofficial.tech/images/posters/kp_small/5368248.jpg",
+      "coverUrl": null,
+      "logoUrl": null,
+      "description": "Ученица 5 класса Маша Хаметова остаётся дома одна, потому что родители уезжают в срочную командировку. Присмотреть за Машей вызвали няню, которую нашли через модный онлайн-сервис. Однако кто мог предположить, что у няня вынашивает коварный план? Теперь у Маши есть одна ночь, чтобы с помощью нейросетей и современных гаджетов вывести преступницу на чистую воду, показав ей, кто в умном доме хозяин.",
+      "ratingAgeLimits": "age6"
+    }
+  ]
+}

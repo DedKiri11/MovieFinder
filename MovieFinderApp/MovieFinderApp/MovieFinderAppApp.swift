@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MovieFinderAppApp: App {
+    @State private var model = MovieViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(model)
+                .preferredColorScheme(.dark)
         }
     }
 }
