@@ -7,24 +7,38 @@
 
 import SwiftUI
 
+private extension CGFloat {
+    static let cornerRadius = 15.0
+    static let vGridSpacing = 10.0
+    static let vColumnMin = 100.0
+}
+
 struct MovieList: View {
     @Environment(MovieViewModel.self) var model
+    let movieListTitle = "Top movies"
     let columns = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible())
-      ]
+    ]
     var body: some View {
-        Text("Top films")
-            .font(.title)
-        ScrollView(.vertical) {
-            LazyVGrid(columns: columns, spacing: 16) {
-                ForEach(model.movies, id: \.self) { movie in
-                    MovieListCard(movie: movie)
+        NavigationStack {
+            ScrollView(.vertical) {
+                LazyVGrid(columns: [
+                    .init(.adaptive(minimum: .vColumnMin))
+                ], spacing: .vGridSpacing) {
+                    ForEach(model.movies, id: \.self) { movie in
+                        NavigationLink(destination: MovieDetail(movie: movie)) {
+                            MovieListCard(movie: movie)
+                        }
+                    }
                 }
             }
+            .navigationTitle(movieListTitle)
+            .defaultScrollAnchor(.top)
+            .scrollIndicators(.hidden)
         }
-        .defaultScrollAnchor(.top)
+        .clipShape(RoundedRectangle(cornerRadius: .cornerRadius))
     }
 }
 

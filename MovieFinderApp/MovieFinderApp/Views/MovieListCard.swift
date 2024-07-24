@@ -19,7 +19,7 @@ struct MovieListCard: View {
     var movie: Movie
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: movie.posterUrlPreview ?? "")) { image in
+            AsyncImage(url: URL(string: movie.posterUrl)) { image in
                 image.image?
                     .resizable()
             }

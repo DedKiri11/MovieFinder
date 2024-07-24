@@ -18,14 +18,19 @@ struct Movie: Codable, Identifiable, Hashable {
     var genres: [Genre]?
     var posterUrl: String
     var posterUrlPreview: String
-
+    var description: String?
+    var year: Int
+    
     static let `default` = Movie(id: 263531,
-                                 name: "Матрица",
-                                 nameOriginal: "The Matrix",
-                                 genres: [ Genre(genre: "фантастика") ],
-                                 posterUrl: "http://kinopoiskapiunofficial.tech/images/posters/kp/263531.jpg",
-                                 posterUrlPreview: "https://kinopoiskapiunofficial.tech/images/posters/kp_small/301.jpg")
-
+                                 name: .defaultMovieName,
+                                 nameOriginal: .defaultMovieOrigName,
+                                 genres: [ Genre(genre: .defaultMovieGenre) ],
+                                 posterUrl: .defaultMoviePoster,
+                                 posterUrlPreview: .defaultMoviePreviewPoster,
+                                 description: .defaultMovieDescription,
+                                 year: 2021
+    )
+    
     enum CodingKeys: String, CodingKey {
         case id = "kinopoiskId"
         case name = "nameRu"
@@ -33,6 +38,8 @@ struct Movie: Codable, Identifiable, Hashable {
         case genres = "genres"
         case posterUrl = "posterUrl"
         case posterUrlPreview = "posterUrlPreview"
+        case description = "description"
+        case year = "year"
     }
     
     static func == (lhs: Movie, rhs: Movie) -> Bool {
@@ -40,7 +47,7 @@ struct Movie: Codable, Identifiable, Hashable {
     }
     
     func hash(into hasher: inout Hasher) {
-            hasher.combine(id)
-        }
-
+        hasher.combine(id)
+    }
+    
 }
