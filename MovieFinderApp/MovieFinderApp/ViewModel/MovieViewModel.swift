@@ -6,27 +6,28 @@
 //
 
 import Foundation
-import UIKit
+import Combine
 
-@Observable
-class MovieViewModel {
-    var movies: [Movie] = []
-
+class MovieViewModel: ObservableObject {
+    @Published var movies: [Movie] = []
+    var cancelables = Set<AnyCancellable>()
+    private var service: MovieDataService?
+    
     init() {
-        APIHelper.passthrough.sink { data in
-            let decoder = JSONDecoder()
-
-            guard let decodedData = try? decoder.decode(MovieResponse.self, from: data) else { return }
-
-            self.movies = decodedData.items
-
-        }.store(in: &APIHelper.canсellables)
-
+        guard let service = Injection.shared.container.resolve(MovieDataService.self) else {
+            return
+        }
+        self.service = service
         load()
     }
-
-    func load() {
-        APIHelper.sendRequest(method: .loadMovie, params: ["type": "TOP_POPULAR_ALL", "page": ""])
+    
+    func load(with params: [String: String] = ["type": "TOP_250_MOVIES", "page": ""]) {
+        service?.getData(with: params)
+            .sink { camplition in
+                print(camplition)
+            } receiveValue: { [weak self] movies in
+                self?.movies = movies
+            }
+            .store(in: &cancelables)
     }
-
 }

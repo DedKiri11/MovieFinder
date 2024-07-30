@@ -6,17 +6,25 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct ContentView: View {
     var body: some View {
         VStack {
-            MovieList()
+            TabView {
+                MovieList()
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                ProfileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
-        .environment(MovieViewModel())
 }

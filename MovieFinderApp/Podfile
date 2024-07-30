@@ -5,6 +5,9 @@ use_frameworks!
 target 'MovieFinderApp' do
 
   pod 'SwiftLint'
+  pod 'Swinject'
+  pod 'GoogleSignIn'
+  pod 'GoogleSignInSwiftSupport'
   
 end
 

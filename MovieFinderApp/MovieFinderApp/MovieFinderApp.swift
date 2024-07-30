@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 @main
 struct MovieFinderAppApp: App {
-    @State private var model = MovieViewModel()
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(model)
                 .preferredColorScheme(.dark)
+                .edgesIgnoringSafeArea(.all)
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
     }
 }
