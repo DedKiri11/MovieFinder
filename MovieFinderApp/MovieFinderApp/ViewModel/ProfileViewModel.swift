@@ -12,13 +12,17 @@ import GoogleSignIn
 final class ProfileViewModel: ObservableObject {
     @Published var isLogin = false
     @Published var fullName = ""
-    @Published var givenName = ""
-    @Published var familyName = ""
-    @Published var image: URL?
+    @Published var image: String?
     
     init() {
-        if let userToken = UserDefaults.standard.value(forKey: "userToken") as? String {
+        if UserDefaults.standard.value(forKey: "userToken") is String {
             isLogin = true
+        }
+        if let name = UserDefaults.standard.value(forKey: "username") as? String {
+            self.fullName = name
+        }
+        if let image = UserDefaults.standard.value(forKey: "userImage") as? String {
+            self.image = image
         }
     }
     
@@ -32,15 +36,13 @@ final class ProfileViewModel: ObservableObject {
             let user = signInResult.user
             if let name = user.profile?.name {
                 self.fullName = name
-            }
-            if let givenName = user.profile?.givenName {
-                self.givenName = givenName
-            }
-            if let familyName = user.profile?.familyName {
-                self.familyName = familyName
+                UserDefaults.standard.setValue(name, forKey: "username")
             }
             if let image = user.profile?.imageURL(withDimension: 320) {
-                self.image = image
+                self.image = image.absoluteString
+                UserDefaults.standard.setValue(image.absoluteString, forKey: "userImage")
+            } else {
+                self.image = nil
             }
             if let token = user.idToken?.tokenString {
                 UserDefaults.standard.setValue(token, forKey: "userToken")
@@ -54,10 +56,9 @@ final class ProfileViewModel: ObservableObject {
     func signOut() {
         GIDSignIn.sharedInstance.signOut()
         UserDefaults.standard.removeObject(forKey: "userToken")
+        UserDefaults.standard.removeObject(forKey: "username")
+        UserDefaults.standard.removeObject(forKey: "userImage")
         self.isLogin = false
         self.fullName = ""
-        self.givenName = ""
-        self.familyName = ""
     }
-    
 }

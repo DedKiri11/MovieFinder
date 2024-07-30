@@ -32,6 +32,7 @@
 		FD90124E2C4E9E57003465C1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD90124D2C4E9E57003465C1 /* Preview Assets.xcassets */; };
 		FDCA6CE42C58E2870037F6A3 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6CE32C58E2870037F6A3 /* Localizable.xcstrings */; };
 		FDCA6CE72C58E9910037F6A3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6CE62C58E9900037F6A3 /* Constants.swift */; };
+		FDCA6CE92C58F57C0037F6A3 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6CE82C58F57C0037F6A3 /* ProfileCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -76,6 +77,7 @@
 		FD9521EB2C4FAEDB0014A4E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FDCA6CE32C58E2870037F6A3 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		FDCA6CE62C58E9900037F6A3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FDCA6CE82C58F57C0037F6A3 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			children = (
 				FD8D428D2C5122DA000E5C6B /* ProfileView.swift */,
 				FD8D42972C525BCC000E5C6B /* AuthorizationButton.swift */,
+				FDCA6CE82C58F57C0037F6A3 /* ProfileCard.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */,
 				FD53781E2C4FE7EF009E1D5A /* MovieDetail.swift in Sources */,
 				FD3B1D892C53B22C00817857 /* Injection.swift in Sources */,
+				FDCA6CE92C58F57C0037F6A3 /* ProfileCard.swift in Sources */,
 				FD4758492C57C9FF0048D05E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

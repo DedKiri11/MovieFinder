@@ -27,7 +27,13 @@ struct ProfileView: View {
             }
             .padding()
         } else {
-            AuthorizationButton(action: model.signOut, buttonText: "Log out", backgroundColor: Color.black, image: "BackButtonIcon")
+            VStack {
+                ProfileCard(
+                    fullName: model.fullName,
+                    image: model.image,
+                    logOutButton:
+                    AuthorizationButton(action: model.signOut, buttonText: "Log out", backgroundColor: Color.black, image: "BackButtonIcon"))
+            }
         }
     }
 }
