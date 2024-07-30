@@ -52,6 +52,16 @@
         }
       }
     },
+    "Load more" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Загрузить еще"
+          }
+        }
+      }
+    },
     "Log out" : {
       "localizations" : {
         "ru" : {

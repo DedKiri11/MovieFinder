@@ -10,7 +10,6 @@
 		EE7DCEA0A7A8A754B4D9FDF0 /* Pods_MovieFinderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8268356E2402833E15F8C683 /* Pods_MovieFinderApp.framework */; };
 		FD3B1D862C53A37900817857 /* MovieDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B1D852C53A37900817857 /* MovieDataService.swift */; };
 		FD3B1D892C53B22C00817857 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B1D882C53B22C00817857 /* Injection.swift */; };
-		FD3B1D8E2C53D5DE00817857 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3B1D8D2C53D5DE00817857 /* UserDTO.swift */; };
 		FD4758452C57B2730048D05E /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = FD4758442C57B2730048D05E /* credentials.plist */; };
 		FD4758492C57C9FF0048D05E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4758482C57C9FF0048D05E /* AppDelegate.swift */; };
 		FD47584C2C57D3720048D05E /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD47584B2C57D3720048D05E /* Application.swift */; };
@@ -55,7 +54,6 @@
 		F3CDC6CEDF05B54E8456E771 /* Pods-MovieFinderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieFinderApp.release.xcconfig"; path = "Target Support Files/Pods-MovieFinderApp/Pods-MovieFinderApp.release.xcconfig"; sourceTree = "<group>"; };
 		FD3B1D852C53A37900817857 /* MovieDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataService.swift; sourceTree = "<group>"; };
 		FD3B1D882C53B22C00817857 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
-		FD3B1D8D2C53D5DE00817857 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		FD4758442C57B2730048D05E /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credentials.plist; sourceTree = "<group>"; };
 		FD4758482C57C9FF0048D05E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD47584B2C57D3720048D05E /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			children = (
 				FD835CF72C4E9F76002F731F /* APIHelper.swift */,
 				FD835D052C4EA490002F731F /* MovieDTO.swift */,
-				FD3B1D8D2C53D5DE00817857 /* UserDTO.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -409,7 +406,6 @@
 				FD835D092C4EA726002F731F /* MovieListCard.swift in Sources */,
 				FD835D062C4EA491002F731F /* MovieDTO.swift in Sources */,
 				FD9012492C4E9E4D003465C1 /* ContentView.swift in Sources */,
-				FD3B1D8E2C53D5DE00817857 /* UserDTO.swift in Sources */,
 				FD835D0B2C4EA733002F731F /* MovieList.swift in Sources */,
 				FD9012472C4E9E4D003465C1 /* MovieFinderApp.swift in Sources */,
 				FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */,

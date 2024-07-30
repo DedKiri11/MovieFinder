@@ -669,8 +669,8 @@
             filePath = "MovieFinderApp/Services/MovieDataService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "getData(with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1121,17 +1121,128 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1ABCF8F6-CDE4-4D79-B0C9-0AA8CCFC4276"
-            shouldBeEnabled = "Yes"
+            uuid = "4B686C3F-0C49-40AF-BCE1-98A597ED1F02"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MovieFinderApp/Views/Profile/ProfileCard.swift"
+            filePath = "MovieFinderApp/ViewModel/MovieViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "load(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B686C3F-0C49-40AF-BCE1-98A597ED1F02 - 299d3f497e20f3f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieFinderApp.MovieViewModel.load(with: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
+                  moduleName = "MovieFinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zez/repository/MovieFinder/MovieFinderApp/MovieFinderApp/ViewModel/MovieViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "396">
+               </Location>
+               <Location
+                  uuid = "4B686C3F-0C49-40AF-BCE1-98A597ED1F02 - 299d3f497e20f397"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieFinderApp.MovieViewModel.load(with: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; ()"
+                  moduleName = "MovieFinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zez/repository/MovieFinder/MovieFinderApp/MovieFinderApp/ViewModel/MovieViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "4B686C3F-0C49-40AF-BCE1-98A597ED1F02 - b8732b187e9ac0b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieFinderApp.MovieViewModel.load() -&gt; ()"
+                  moduleName = "MovieFinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zez/repository/MovieFinder/MovieFinderApp/MovieFinderApp/ViewModel/MovieViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "560">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DD6BD7E-7B67-4375-9D2F-698EB642F6B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFinderApp/ViewModel/MovieViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "872502B0-9BF4-4CF2-B5FC-AC7B6AAAC8BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieFinderApp/Services/MovieDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getData(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "872502B0-9BF4-4CF2-B5FC-AC7B6AAAC8BE - b899626c39d17794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieFinderApp.MovieDataService.getData(with: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MovieFinderApp.Movie&gt;, Swift.Error&gt;"
+                  moduleName = "MovieFinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zez/repository/MovieFinder/MovieFinderApp/MovieFinderApp/Services/MovieDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "584">
+               </Location>
+               <Location
+                  uuid = "872502B0-9BF4-4CF2-B5FC-AC7B6AAAC8BE - 14674867e17522b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (MovieFinderApp.MovieDTO) -&gt; Swift.Array&lt;MovieFinderApp.Movie&gt; in MovieFinderApp.MovieDataService.getData(with: Swift.Dictionary&lt;Swift.String, Swift.String&gt;) -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;MovieFinderApp.Movie&gt;, Swift.Error&gt;"
+                  moduleName = "MovieFinderApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zez/repository/MovieFinder/MovieFinderApp/MovieFinderApp/Services/MovieDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

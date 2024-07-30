@@ -20,7 +20,9 @@ struct MovieList: View {
                     .init(.adaptive(minimum: Constants.vGridColumnMinMovieList))
                 ], spacing: Constants.vGridSpacingMovieList) {
                     ForEach(model.movies, id: \.self) { movie in
-                        NavigationLink(destination: MovieDetail(movie: movie)) {
+                        NavigationLink(
+                            destination: MovieDetail(movie: movie)
+                        ) {
                             MovieListCard(movie: movie)
                         }
                         .opacity(showItems ? Constants.opacity1 : Constants.opacity02)
@@ -35,8 +37,23 @@ struct MovieList: View {
                 .navigationTitle("Top movies")
                 .defaultScrollAnchor(.top)
                 .scrollIndicators(.hidden)
+                if model.isLoadMore {
+                    ProgressView()
+                } else {
+                    Button(action: {
+                        model.isLoadMore = true
+                        model.loadMoreItems()
+                    }, label: {
+                        Text("Load more")
+                            .padding()
+                            .background(RoundedRectangle(cornerRadius: Constants.cornerRadius15)
+                                .fill(Color.white)
+                            )
+                            .foregroundColor(.black)
+                    })
+                    .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
+                }
             }
-            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
         }
     }
 }
