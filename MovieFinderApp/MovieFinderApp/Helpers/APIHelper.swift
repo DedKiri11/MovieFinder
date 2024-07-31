@@ -18,11 +18,12 @@ class APIHelper {
 
     enum APIMethods: String {
         case loadMovie = "films/collections"
+        case searchMovie = "films"
         case loadStaff = "staff"
     }
 
-    private static let apiKey = "05ce83b1-4538-4d91-834b-122e6287360e"
-    private static let baseURL = "https://kinopoiskapiunofficial.tech/api/v2.2/"
+    private static let apiKey = APIConstants.apiKey
+    private static let baseURL = APIConstants.baseURLForMovie
     static let passthrough = PassthroughSubject<Data, Never>()
     static var canсellables =  Set<AnyCancellable>()
 
@@ -52,10 +53,8 @@ class APIHelper {
                 print(APIErrors.dataMissing.rawValue)
                 return
             }
-
             self.passthrough.send(data)
         }
-
         task.resume()
     }
 

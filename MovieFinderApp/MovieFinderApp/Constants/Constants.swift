@@ -9,7 +9,7 @@ import Foundation
 
 struct Constants {
     static let cornerRadius15 = 15.0
-    static let emptyText = ""
+    static let emptyString = ""
     static let lineLimit1 = 1
     static let opacity1 = 1.0
     static let opacity02 = 0.2
@@ -26,6 +26,12 @@ struct Constants {
     static let vGridSpacingMovieList = 10.0
     static let vGridColumnMinMovieList = 100.0
     static let cardAnimationDurationMovieList = 0.7
+    // MARK: SearchBar
+    static let searchBarHeight = 50.0
+    static let searchCancelButtonHeight = 20.0
+    static let searchCancelButtonWidth = 20.0
+    static let backgroundHeightSearchBar = 40.0
+    static let borderWidthSearchBar = 2.0
     // MARK: MovieListCard
     static let imageHeightMovieListCard = 145.0
     static let imageWidhtMovieListCard = 100.0

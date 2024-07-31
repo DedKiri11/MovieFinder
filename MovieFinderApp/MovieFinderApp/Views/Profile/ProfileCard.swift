@@ -26,7 +26,7 @@ struct ProfileCard: View {
                             .frame(width: Constants.imageWidhtProfileCard, height: Constants.imageHeightProfileCard)
                     }
                 } else {
-                    Image("UnknownImage")
+                    Image(.unknown)
                         .resizable()
                         .scaledToFit()
                         .clipShape(Circle())

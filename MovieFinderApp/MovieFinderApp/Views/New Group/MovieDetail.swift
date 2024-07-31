@@ -11,7 +11,7 @@ struct MovieDetail: View {
     @Environment(\.dismiss) var dismiss
     var movie: Movie
     var body: some View {
-        let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyText
+        let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyString
         HStack {
             VStack {
                 Button(action: {
@@ -48,7 +48,7 @@ struct MovieDetail: View {
                     Text("About")
                         .font(.title3)
                         .padding()
-                    Text(movie.description ?? Constants.emptyText)
+                    Text(movie.description ?? Constants.emptyString)
                         .font(.callout)
                     Spacer()
                 }

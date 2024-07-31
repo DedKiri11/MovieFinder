@@ -13,8 +13,12 @@ class MovieDataService {
     private var canсellables: Set<AnyCancellable> = []
     var totalPages = 0
     
-    func getData(with params: [String : String]) -> AnyPublisher<[Movie], Error> {
-        fetchData(with: params)
+     enum FetchMethod: String {
+        case load = "loadMovie"
+        case search = "searchMovie"
+    }
+    
+    func getData() -> AnyPublisher<[Movie], Error> {
         return APIHelper.passthrough
             .decode(type: MovieDTO.self, decoder: JSONDecoder())
             .tryMap { movieDTO -> [Movie] in
@@ -25,7 +29,12 @@ class MovieDataService {
             .eraseToAnyPublisher()
     }
     
-    func fetchData(with params: [String : String]) {
-        APIHelper.sendRequest(method: .loadMovie, params: params)
+    func fetchData(with params: [String : String], method: FetchMethod) {
+        switch method {
+        case .search:
+            APIHelper.sendRequest(method: .searchMovie, params: params)
+        default:
+            APIHelper.sendRequest(method: .loadMovie, params: params)
+        }
     }
 }

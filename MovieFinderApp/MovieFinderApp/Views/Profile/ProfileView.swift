@@ -21,7 +21,6 @@ struct ProfileView: View {
                 Spacer()
                 VStack {
                     AuthorizationButton(action: model.signInWithGoogle, buttonText: "Sign in with Google", backgroundColor: Color.white, image: "GoogleIcon")
-                    Text("")
                 }
                 Spacer()
             }

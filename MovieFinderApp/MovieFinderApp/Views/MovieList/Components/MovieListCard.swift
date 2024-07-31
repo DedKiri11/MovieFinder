@@ -8,7 +8,6 @@
 import SwiftUI
 import Foundation
 
-
 struct MovieListCard: View {
     var movie: Movie
     var body: some View {

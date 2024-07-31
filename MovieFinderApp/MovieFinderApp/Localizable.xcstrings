@@ -98,12 +98,32 @@
         }
       }
     },
+    "Search" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск"
+          }
+        }
+      }
+    },
     "Sign in with Google" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Войти с помощью Google"
+          }
+        }
+      }
+    },
+    "This is the end" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это конец списка"
           }
         }
       }

@@ -59,6 +59,6 @@ final class ProfileViewModel: ObservableObject {
         UserDefaults.standard.removeObject(forKey: "username")
         UserDefaults.standard.removeObject(forKey: "userImage")
         self.isLogin = false
-        self.fullName = ""
+        self.fullName = Constants.emptyString
     }
 }
