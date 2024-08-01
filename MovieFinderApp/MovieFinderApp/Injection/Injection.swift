@@ -28,6 +28,9 @@ final class Injection {
         container.register(MovieDataService.self) { _ in
             return MovieDataService()
         }
+        container.register(MovieRepository.self) { _ in
+            return MovieRepository()
+        }
         return container
     }
 }

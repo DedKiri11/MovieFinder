@@ -23,7 +23,7 @@ struct MovieList: View {
                 ], spacing: Constants.vGridSpacingMovieList) {
                     ForEach(isSearching ? model.responseData : model.movies, id: \.self) { movie in
                         NavigationLink(
-                            destination: MovieDetail(movie: movie)
+                            destination: MovieDetail(model: DetailViewModel(movie: movie), movie: movie)
                         ) {
                             MovieListCard(movie: movie)
                         }

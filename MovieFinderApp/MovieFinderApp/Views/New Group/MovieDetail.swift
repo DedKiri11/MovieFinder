@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct MovieDetail: View {
+    let maxRating = 5
     @Environment(\.dismiss) var dismiss
+    @StateObject var model: DetailViewModel
     var movie: Movie
     var body: some View {
         let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyString
         HStack {
             VStack {
                 Button(action: {
+                    if model.isAded {
+                            model.saveMark(movie: movie)
+                    } else {
+                        if model.mark != 0 {
+                            model.saveMovie(movie: movie)
+                        }
+                    }
                     dismiss()
                 }, label: {
                     Image(.backButtonIcon)
@@ -41,6 +50,15 @@ struct MovieDetail: View {
             HStack {
                 Text("Relize year: \(movie.year)")
                 Spacer()
+                ForEach(1...maxRating, id: \.self) {number in
+                    Image(systemName: number <= model.mark ? "star.fill" : "star")
+                        .foregroundColor(.yellow)
+                        .onTapGesture {
+                            withAnimation(.easeInOut(duration: 0.5)) {
+                                model.mark = number
+                            }
+                        }
+                }
             }
             HStack {
                 Spacer()
@@ -59,9 +77,10 @@ struct MovieDetail: View {
             )
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
         }
+        .padding()
     }
 }
 
 #Preview {
-    MovieDetail(movie: Movie.default)
+    MovieDetail(model: DetailViewModel(movie: Movie.default), movie: Movie.default)
 }

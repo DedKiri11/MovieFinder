@@ -46,6 +46,7 @@ final class ProfileViewModel: ObservableObject {
             }
             if let token = user.idToken?.tokenString {
                 UserDefaults.standard.setValue(token, forKey: "userToken")
+                UserToken.token = token
             } else {
                 return
             }
