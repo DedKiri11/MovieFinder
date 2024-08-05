@@ -20,6 +20,8 @@ struct Movie: Codable, Identifiable, Hashable {
     var posterUrlPreview: String
     var description: String?
     var year: Int
+    var isFavorite: Bool = false
+    var mark: Int = 0
 
     static let `default` = Movie(id: 263531,
                                  name: "Матрица",

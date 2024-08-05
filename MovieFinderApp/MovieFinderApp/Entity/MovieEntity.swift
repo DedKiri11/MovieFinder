@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 
 class MovieEntity: Object, ObjectKeyIdentifiable {
-    @Persisted(primaryKey: true) var kinopoiskId: String
+    @Persisted(primaryKey: true) var id: String
+    @Persisted var kinopoiskId: String
     @Persisted var name: String
     @Persisted var nameOriginal: String
     @Persisted var posterUrl: String
@@ -17,11 +18,14 @@ class MovieEntity: Object, ObjectKeyIdentifiable {
     @Persisted var genres: String
     @Persisted var movieDescription: String
     @Persisted var year: String
-    @Persisted var rating: Int
+    @Persisted var mark: Int
+    @Persisted var isFavorite: Bool
     @Persisted var ownerId: String
+    @Persisted var dataOfCreation: Date
     
-    convenience init(kinopoiskId: String, name: String, nameOriginal: String, posterUrl: String, posterUrlPreview: String, genres: String, movieDescription: String, year: String, rating: Int, ownerId: String) {
+    convenience init(kinopoiskId: String, name: String, nameOriginal: String, posterUrl: String, posterUrlPreview: String, genres: String, movieDescription: String, year: String, mark: Int, ownerId: String, isFavorite: Bool) {
         self.init()
+        self.id = UUID().uuidString
         self.kinopoiskId = kinopoiskId
         self.name = name
         self.nameOriginal = nameOriginal
@@ -30,7 +34,9 @@ class MovieEntity: Object, ObjectKeyIdentifiable {
         self.genres = genres
         self.movieDescription = movieDescription
         self.year = year
-        self.rating = rating
+        self.mark = mark
         self.ownerId = ownerId
+        self.dataOfCreation = Date()
+        self.isFavorite = isFavorite
     }
 }

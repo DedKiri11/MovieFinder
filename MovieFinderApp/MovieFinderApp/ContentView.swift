@@ -16,6 +16,10 @@ struct ContentView: View {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
+                FavoritesList()
+                    .tabItem {
+                        Label("List", systemImage: "list.and.film")
+                    }
                 ProfileView()
                     .tabItem {
                         Label("Profile", systemImage: "person.circle")

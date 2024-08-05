@@ -18,6 +18,7 @@ struct MovieListCard: View {
             }
             .frame(width: Constants.imageWidhtMovieListCard, height: Constants.imageHeightMovieListCard)
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
+            .scaledToFill()
         }
         .padding()
         .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))

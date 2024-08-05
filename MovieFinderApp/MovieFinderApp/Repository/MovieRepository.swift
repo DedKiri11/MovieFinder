@@ -7,53 +7,121 @@
 
 import Foundation
 import RealmSwift
+import Combine
 
-class MovieRepository {
-    let realm = try! Realm()
+class MovieRepository: Repository {
+    private var notificationToken: NotificationToken?
+    private var objectsSubject = PassthroughSubject<[MovieEntity], Never>()
+    var objectsPublisher: AnyPublisher<[MovieEntity], Never>
     
-    func create(movie: Movie, rating: Int) {
-        let movie = toMoveEntity(movie: movie, rating: rating)
-        try! realm.write {
-            realm.add(movie)
+    init() {
+        objectsPublisher = self.objectsSubject.eraseToAnyPublisher()
+        fetchObjects()
+    }
+    
+    private func fetchObjects() {
+        let results = RealmData.shared.realm.objects(MovieEntity.self)
+        
+        notificationToken = results.observe { [weak self] changes in
+            switch changes {
+            case .initial:
+                self?.objectsSubject.send(Array(self?.findByOwnerId() ?? []))
+            case .update(_, let deletions, _, _):
+                var currentObjects = Array(self?.findByOwnerId() ?? [])
+                currentObjects.remove(atOffsets: IndexSet(deletions))
+                self?.objectsSubject.send(currentObjects)
+            case .error(let error):
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
     
-    func updateMark(id: Int, mark: Int) {
-        guard let movie = findByKinopoisId(id: id) else { return }
+    func delete(movie: MovieEntity) {
+        guard let personToDelete = RealmData.shared.realm.object(ofType: MovieEntity.self, forPrimaryKey: movie.id) else { return }
         
-        try! realm.write {
-            movie.rating = mark
+        do {
+            try RealmData.shared.realm.write {
+                RealmData.shared.realm.delete(personToDelete)
+            }
+        } catch {
+            print("Error deleting movie: \(error.localizedDescription)")
         }
+    }
+    
+    func create(movie: MovieEntity) {
+        do {
+            try RealmData.shared.realm.write {
+                RealmData.shared.realm.add(movie)
+            }
+        } catch {
+            print("Error creating Movie: \(error.localizedDescription)")
+        }
+    }
+    
+    func update(movie: MovieEntity, mark: Int, isFavorite: Bool) {
+        do {
+            try RealmData.shared.realm.write {
+                movie.mark = mark
+                movie.isFavorite = isFavorite
+            }
+        } catch {
+            print("Error updating Movie: \(error.localizedDescription)")
+        }
+    }
+    
+    func toMovie(movie: MovieEntity) -> Movie? {
+        guard
+            let kinopoiskId = Int(movie.kinopoiskId),
+            let year = Int(movie.year) else {
+            return nil
+        }
+        return Movie(id: kinopoiskId,
+                     posterUrl: movie.posterUrl,
+                     posterUrlPreview: movie.posterUrlPreview,
+                     year: year)
+    }
+    
+    func toMovieEntity(movie: Movie) -> MovieEntity {
+        let kinopoiskId = String(movie.id)
+        let name = movie.name ?? ""
+        let nameOriginal = movie.nameOriginal
+        let genres = movie.genres?.compactMap { $0.genre }.joined(separator: ", ") ?? ""
+        
+        let posterUrl = movie.posterUrl
+        let posterUrlPreview = movie.posterUrlPreview
+        let movieDescription = movie.description
+        let year = String(movie.year)
+        
+        return MovieEntity(
+            kinopoiskId: kinopoiskId,
+            name: name,
+            nameOriginal: nameOriginal ?? "",
+            posterUrl: posterUrl,
+            posterUrlPreview: posterUrlPreview,
+            genres: genres,
+            movieDescription: movieDescription ?? "",
+            year: year,
+            mark: movie.mark,
+            ownerId: UserToken.token,
+            isFavorite: movie.isFavorite
+        )
     }
     
     func findByOwnerId() -> [MovieEntity]? {
         let ownerId = UserToken.token
-        return realm.objects(MovieEntity.self).filter {
+        return RealmData.shared.realm.objects(MovieEntity.self).filter {
             $0.ownerId == ownerId
         }
     }
     
-    func findByKinopoisId(id: Int) -> MovieEntity? {
+    func findByKinopoisId(id: String) -> MovieEntity? {
         let ownerId = UserToken.token
-        return realm.objects(MovieEntity.self).filter({
-           return $0.ownerId == ownerId && $0.kinopoiskId == String(id)
+        return RealmData.shared.realm.objects(MovieEntity.self).filter({
+            return $0.ownerId == ownerId && $0.kinopoiskId == id
         }).first
     }
     
-    func toMoveEntity(movie: Movie, rating: Int) -> MovieEntity {
-        MovieEntity(
-            kinopoiskId: String(movie.id),
-            name: movie.name ?? "",
-            nameOriginal: movie.name ?? "",
-            posterUrl: movie.name ?? "",
-            posterUrlPreview: movie.name ?? "",
-            genres: movie.genres?.compactMap({ genre in
-                genre.genre
-            }).joined(separator: ", ") ?? "",
-            movieDescription: movie.name ?? "",
-            year: movie.name ?? "",
-            rating: rating,
-            ownerId: UserDefaults.standard.value(forKey: "userToken") as! String
-        )
+    deinit {
+        notificationToken?.invalidate()
     }
 }

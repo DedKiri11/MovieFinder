@@ -6,34 +6,54 @@
 //
 
 import Foundation
+import RealmSwift
 
 class DetailViewModel: ObservableObject {
-    @Published var movie = MovieEntity()
-    private var repository: MovieRepository?
+    @Published var movie: MovieEntity
     @Published var isAded: Bool = false
     @Published var mark: Int = 0
+    @Published var isLogined: Bool = !UserToken.token.isEmpty
+    @Published var isFavorite: Bool = false
+    private var repository: Repository
     
     init(movie: Movie) {
-        guard let repository = Injection.shared.container.resolve(MovieRepository.self) else {
-            return
+        guard let repository = Injection.shared.container.resolve(Repository.self) else {
+            fatalError("Dependency Injection failed for MovieRepository")
         }
         self.repository = repository
-        guard let movie = repository.findByKinopoisId(id: movie.id) else { return }
+        self.movie = repository.toMovieEntity(movie: movie)
+        guard let movieEntity = repository.findByKinopoisId(id: self.movie.kinopoiskId) else { return }
+        self.movie = movieEntity
         self.isAded = true
-        self.movie = movie
         self.mark = getMark()
+        self.isFavorite = getIsFavorite()
     }
     
-    func saveMark(movie: Movie) {
-        self.repository?.updateMark(id: movie.id, mark: self.mark)
+    func updateMovie() {
+        if self.mark != 0, self.isAded {
+            self.repository.update(movie: self.movie, mark: self.mark, isFavorite: self.isFavorite)
+        }
     }
     
-    func saveMovie(movie: Movie) {
-        self.repository?.create(movie: movie, rating: self.mark)
+    func deleteMovie() {
+        if self.mark == 0, self.isAded, !self.isFavorite {
+            self.repository.delete(movie: self.movie)
+        }
+    }
+    
+    func saveMovie() {
+        if (self.mark != 0 || self.isFavorite), self.isLogined {
+            self.movie.mark = self.mark
+            self.movie.isFavorite = self.isFavorite
+            self.repository.create(movie: self.movie)
+        }
     }
     
     func getMark() -> Int {
-        self.movie.rating
+       return self.movie.mark
     }
     
+    func getIsFavorite() -> Bool {
+       return self.movie.isFavorite
+    }
 }

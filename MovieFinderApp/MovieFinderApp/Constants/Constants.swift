@@ -20,6 +20,7 @@ struct Constants {
     // MARK: MovieDetail
     static let imageHeightMovieDetail = 400.0
     static let imageWidthMovieDetail = 320.0
+    static let titlePaddingLeadingMovieDetail = 35.0
     static let vStackElementsSpacingMovieDetail = 12.0
     static let aboutMovieBackgroundOpacity = 0.2
     // MARK: MovieList

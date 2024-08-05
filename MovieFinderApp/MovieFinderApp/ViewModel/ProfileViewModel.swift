@@ -15,8 +15,9 @@ final class ProfileViewModel: ObservableObject {
     @Published var image: String?
     
     init() {
-        if UserDefaults.standard.value(forKey: "userToken") is String {
+        if let token = UserDefaults.standard.value(forKey: "userToken") as? String {
             isLogin = true
+            UserToken.token = token
         }
         if let name = UserDefaults.standard.value(forKey: "username") as? String {
             self.fullName = name
@@ -61,5 +62,6 @@ final class ProfileViewModel: ObservableObject {
         UserDefaults.standard.removeObject(forKey: "userImage")
         self.isLogin = false
         self.fullName = Constants.emptyString
+        UserToken.token = ""
     }
 }

@@ -11,9 +11,12 @@ struct MovieList: View {
     @StateObject var model = MovieViewModel()
     @State private var showItems = false
     @State var isSearching = false
+    @State private var selectedMovie: Movie?
     
     var body: some View {
-        NavigationStack {
+        VStack {
+            Text(!isSearching ? "Top movies": "Search")
+                .font(.largeTitle)
             SearchBar(searchText: $model.searchResponse, isSerching: $isSearching, action:
                         model.search, cancelAction: model.cancelSearch)
             .padding()
@@ -22,13 +25,10 @@ struct MovieList: View {
                     .init(.adaptive(minimum: Constants.vGridColumnMinMovieList))
                 ], spacing: Constants.vGridSpacingMovieList) {
                     ForEach(isSearching ? model.responseData : model.movies, id: \.self) { movie in
-                        NavigationLink(
-                            destination: MovieDetail(model: DetailViewModel(movie: movie), movie: movie)
-                        ) {
-                            MovieListCard(movie: movie)
-                        }
-                        .opacity(showItems ? Constants.opacity1 : Constants.opacity02)
-                        .animation(.easeInOut(duration: Constants.cardAnimationDurationMovieList), value: showItems)
+                        MovieListCard(movie: movie)
+                            .onTapGesture {
+                                selectedMovie = movie
+                            }
                     }
                     .onAppear {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -36,7 +36,6 @@ struct MovieList: View {
                         }
                     }
                 }
-                .navigationTitle(!isSearching ? "Top movies": "Search")
                 .defaultScrollAnchor(.top)
                 .scrollIndicators(.hidden)
                 if model.isLoadMore || !showItems {
@@ -59,6 +58,12 @@ struct MovieList: View {
                     }
                 }
             }
+            .fullScreenCover(item: $selectedMovie) { movie in
+                MovieDetail(model: DetailViewModel(movie: movie), movie: movie)
+            }
+            .scrollIndicators(.hidden)
+            .opacity(showItems ? Constants.opacity1 : Constants.opacity02)
+            .animation(.easeInOut(duration: Constants.cardAnimationDurationMovieList), value: showItems)
         }
     }
 }

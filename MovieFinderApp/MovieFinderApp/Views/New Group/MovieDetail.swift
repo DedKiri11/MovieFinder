@@ -18,11 +18,10 @@ struct MovieDetail: View {
             VStack {
                 Button(action: {
                     if model.isAded {
-                            model.saveMark(movie: movie)
+                        model.updateMovie()
+                        model.deleteMovie()
                     } else {
-                        if model.mark != 0 {
-                            model.saveMovie(movie: movie)
-                        }
+                        model.saveMovie()
                     }
                     dismiss()
                 }, label: {
@@ -31,11 +30,13 @@ struct MovieDetail: View {
                 })
             }
             .padding(.leading)
+            Spacer()
             Text(name)
                 .font(.title2)
                 .lineLimit(Constants.lineLimit1)
-                .padding(.trailing)
+                .padding(.leading, Constants.titlePaddingLeadingMovieDetail)
             Spacer()
+            HeartView(isFavorite: $model.isFavorite)
         }
         .navigationBarBackButtonHidden(true)
         ScrollView(.vertical) {
@@ -50,15 +51,12 @@ struct MovieDetail: View {
             HStack {
                 Text("Relize year: \(movie.year)")
                 Spacer()
-                ForEach(1...maxRating, id: \.self) {number in
-                    Image(systemName: number <= model.mark ? "star.fill" : "star")
-                        .foregroundColor(.yellow)
-                        .onTapGesture {
-                            withAnimation(.easeInOut(duration: 0.5)) {
-                                model.mark = number
-                            }
-                        }
-                }
+            }
+            if model.isLogined {
+                StarsMark(mark: $model.mark)
+                    .padding()
+            } else {
+                Text("If you want to rate movies you need to log in")
             }
             HStack {
                 Spacer()
@@ -77,6 +75,7 @@ struct MovieDetail: View {
             )
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
         }
+        .scrollIndicators(.hidden)
         .padding()
     }
 }
