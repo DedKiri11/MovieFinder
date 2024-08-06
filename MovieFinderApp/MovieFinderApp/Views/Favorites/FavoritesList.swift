@@ -28,8 +28,7 @@ struct FavoritesList: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                 showItems = true
                             }
-                    }
-                    )
+                    })
                     Spacer()
                 }
                 .padding(.leading)

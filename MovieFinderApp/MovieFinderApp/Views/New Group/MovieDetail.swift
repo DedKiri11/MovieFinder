@@ -14,69 +14,74 @@ struct MovieDetail: View {
     var movie: Movie
     var body: some View {
         let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyString
-        HStack {
-            VStack {
-                Button(action: {
-                    if model.isAded {
-                        model.updateMovie()
-                        model.deleteMovie()
-                    } else {
-                        model.saveMovie()
+        ZStack {
+            ShareButtonView(movie: movie)
+            ScrollView(.vertical) {
+                HStack {
+                    VStack {
+                        Button(action: {
+                            if model.isAded {
+                                model.updateMovie()
+                                model.deleteMovie()
+                            } else {
+                                model.saveMovie()
+                            }
+                            dismiss()
+                        }, label: {
+                            Image(.backButtonIcon)
+                                .foregroundColor(.gray)
+                        })
                     }
-                    dismiss()
-                }, label: {
-                    Image(.backButtonIcon)
-                        .foregroundColor(.gray)
-                })
-            }
-            .padding(.leading)
-            Spacer()
-            Text(name)
-                .font(.title2)
-                .lineLimit(Constants.lineLimit1)
-                .padding(.leading, Constants.titlePaddingLeadingMovieDetail)
-            Spacer()
-            HeartView(isFavorite: $model.isFavorite)
-        }
-        .navigationBarBackButtonHidden(true)
-        ScrollView(.vertical) {
-            VStack {
-                AsyncImage(url: URL(string: movie.posterUrl)) { image in
-                    image.image?
-                        .resizable()
-                        .scaledToFill()
+                    .padding(.leading)
+                    Spacer()
+                    Text(name)
+                        .font(.title2)
+                        .lineLimit(Constants.lineLimit1)
+                        .padding(.leading, Constants.titlePaddingLeadingMovieDetail)
+                    Spacer()
+                    HeartView(isFavorite: $model.isFavorite)
                 }
-            }
-            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
-            HStack {
-                Text("Relize year: \(movie.year)")
-                Spacer()
-            }
-            if model.isLogined {
-                StarsMark(mark: $model.mark)
-                    .padding()
-            } else {
-                Text("If you want to rate movies you need to log in")
-            }
-            HStack {
-                Spacer()
+                .navigationBarBackButtonHidden(true)
+                .zIndex(3)
                 VStack {
-                    Text("About")
-                        .font(.title3)
-                        .padding()
-                    Text(movie.description ?? Constants.emptyString)
-                        .font(.callout)
+                    AsyncImage(url: URL(string: movie.posterUrl)) { image in
+                        image.image?
+                            .resizable()
+                            .scaledToFill()
+                    }
+                }
+                .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
+                HStack {
+                    Text("Relize year: \(movie.year)")
                     Spacer()
                 }
-                Spacer()
+                if model.isLogined {
+                    StarsMark(mark: $model.mark)
+                        .padding()
+                } else {
+                    Text("If you want to rate movies you need to log in")
+                }
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("About")
+                            .font(.title3)
+                            .padding()
+                        Text(movie.description ?? Constants.emptyString)
+                            .font(.callout)
+                        Spacer()
+                    }
+                    Spacer()
+                }
+                .background(.gray
+                    .opacity(Constants.aboutMovieBackgroundOpacity)
+                )
+                .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
             }
-            .background(.gray
-                .opacity(Constants.aboutMovieBackgroundOpacity)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
+            .scrollIndicators(.hidden)
+            .padding()
+            
         }
-        .scrollIndicators(.hidden)
-        .padding()
     }
 }
 

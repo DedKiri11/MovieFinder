@@ -18,7 +18,14 @@
       }
     },
     "Date" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата"
+          }
+        }
+      }
     },
     "Entry" : {
       "localizations" : {
@@ -63,10 +70,24 @@
       }
     },
     "List" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Список"
+          }
+        }
+      }
     },
     "List of favorites" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Список любимых"
+          }
+        }
+      }
     },
     "Load more" : {
       "localizations" : {
@@ -125,7 +146,14 @@
       }
     },
     "Search favorites" : {
-
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поиск любимых"
+          }
+        }
+      }
     },
     "Sign in with Google" : {
       "localizations" : {

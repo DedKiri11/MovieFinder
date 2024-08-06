@@ -45,4 +45,8 @@ struct Constants {
     static let imageHeightFavoritesListTile = 100.0
     static let imageWidhtFavoritesListTile = 100.0
     static let tileHeightFavoritesListTile = 400.0
+    // MARK: ShareButton
+    static let positionXShareButton = 360.0
+    static let positionYShareButton = 600.0
+    static let boxWidthShareButton = 50.0
 }
