@@ -9,6 +9,7 @@ import Foundation
 
 class FavoriteViewModel: ObservableObject {
     @Published var isFavoriteMovies: [Movie] = []
+    @Published var isLatest: Bool = true
     private var repository: Repository
     private var cancellables = Set<AnyCancellable>()
     
@@ -18,6 +19,19 @@ class FavoriteViewModel: ObservableObject {
         }
         self.repository = repository
         bindRepository()
+    }
+    
+    func filterByDate() {
+        if self.isLatest {
+            self.isFavoriteMovies = self.isFavoriteMovies.sorted {
+                $0.dateOfAded < $1.dateOfAded
+            }
+            
+        } else {
+            self.isFavoriteMovies = self.isFavoriteMovies.sorted {
+                $0.dateOfAded > $1.dateOfAded
+            }
+        }
     }
     
     private func bindRepository() {

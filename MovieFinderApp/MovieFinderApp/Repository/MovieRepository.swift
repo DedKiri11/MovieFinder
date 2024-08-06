@@ -75,10 +75,23 @@ class MovieRepository: Repository {
             let year = Int(movie.year) else {
             return nil
         }
+        
+        let genres = movie.genres.components(separatedBy: ", ")
+            .compactMap { genre in
+                Genre(genre: genre)
+            }
+        
         return Movie(id: kinopoiskId,
+                     name: movie.name,
+                     nameOriginal: movie.nameOriginal,
+                     genres: genres,
                      posterUrl: movie.posterUrl,
                      posterUrlPreview: movie.posterUrlPreview,
-                     year: year)
+                     description: movie.movieDescription,
+                     year: year,
+                     isFavorite: movie.isFavorite,
+                     dateOfAded: movie.dataOfCreation
+        )
     }
     
     func toMovieEntity(movie: Movie) -> MovieEntity {

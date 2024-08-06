@@ -17,6 +17,9 @@
         }
       }
     },
+    "Date" : {
+
+    },
     "Entry" : {
       "localizations" : {
         "en" : {
@@ -32,9 +35,6 @@
           }
         }
       }
-    },
-    "Hello, World!" : {
-
     },
     "Home" : {
       "localizations" : {
@@ -63,6 +63,9 @@
       }
     },
     "List" : {
+
+    },
+    "List of favorites" : {
 
     },
     "Load more" : {
@@ -120,6 +123,9 @@
           }
         }
       }
+    },
+    "Search favorites" : {
+
     },
     "Sign in with Google" : {
       "localizations" : {

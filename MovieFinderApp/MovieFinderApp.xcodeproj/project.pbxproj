@@ -21,6 +21,7 @@
 		FD5B48CB2C5A7143002FF763 /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B48CA2C5A7143002FF763 /* MovieEntity.swift */; };
 		FD5B48CE2C5A7657002FF763 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B48CD2C5A7657002FF763 /* MovieRepository.swift */; };
 		FD5B48D02C5A82C8002FF763 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5B48CF2C5A82C8002FF763 /* UserToken.swift */; };
+		FD7661B62C61082900163B9C /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661B52C61082900163B9C /* DateFilterView.swift */; };
 		FD7F66412C57804000A1D264 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F66402C57804000A1D264 /* ProfileViewModel.swift */; };
 		FD835CF82C4E9F76002F731F /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD835CF72C4E9F76002F731F /* APIHelper.swift */; };
 		FD835CFD2C4EA1DC002F731F /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD835CFC2C4EA1DC002F731F /* MovieViewModel.swift */; };
@@ -78,6 +79,7 @@
 		FD5B48CA2C5A7143002FF763 /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		FD5B48CD2C5A7657002FF763 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
 		FD5B48CF2C5A82C8002FF763 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		FD7661B52C61082900163B9C /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		FD7F66402C57804000A1D264 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FD835CF72C4E9F76002F731F /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		FD835CFC2C4EA1DC002F731F /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				FD9033CC2C5BB93F007C98AF /* FavoritesListTile.swift */,
+				FD7661B52C61082900163B9C /* DateFilterView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -496,6 +499,7 @@
 				FD7F66412C57804000A1D264 /* ProfileViewModel.swift in Sources */,
 				FD13C7FC2C60B508001D2046 /* RealmData.swift in Sources */,
 				FD9033BF2C5B7147007C98AF /* StarsMark.swift in Sources */,
+				FD7661B62C61082900163B9C /* DateFilterView.swift in Sources */,
 				FD9033CD2C5BB93F007C98AF /* FavoritesListTile.swift in Sources */,
 				FD9033C52C5B8574007C98AF /* FavoriteViewModel.swift in Sources */,
 				FD5B48D02C5A82C8002FF763 /* UserToken.swift in Sources */,

@@ -22,6 +22,7 @@ struct Movie: Codable, Identifiable, Hashable {
     var year: Int
     var isFavorite: Bool = false
     var mark: Int = 0
+    var dateOfAded: Date = Date()
 
     static let `default` = Movie(id: 263531,
                                  name: "Матрица",

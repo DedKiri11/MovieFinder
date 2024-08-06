@@ -41,4 +41,8 @@ struct Constants {
     static let imageHeightProfileCard = 200.0
     static let imageWidhtProfileCard = 200.0
     static let paddingTopOfLogOutButton = 20.0
+    // MARK: FavoritesListTile
+    static let imageHeightFavoritesListTile = 100.0
+    static let imageWidhtFavoritesListTile = 100.0
+    static let tileHeightFavoritesListTile = 400.0
 }
