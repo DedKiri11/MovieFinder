@@ -9,32 +9,27 @@ import Foundation
 import Combine
 
 class MovieDataService {
-    private var data: [Movie] = []
-    private var canсellables: Set<AnyCancellable> = []
     var totalPages = 0
     
-     enum FetchMethod: String {
-        case load = "loadMovie"
-        case search = "searchMovie"
+    func getData(with params: [String : String]) -> AnyPublisher<[Movie], Error> {
+        return self.sendRequest(method: .loadMovie, params: params)
     }
     
-    func getData() -> AnyPublisher<[Movie], Error> {
-        return APIHelper.passthrough
+    func getDataForSearch(with params: [String : String]) -> AnyPublisher<[Movie], Error> {
+        return self.sendRequest(method: .searchMovie, params: params)
+    }
+    
+    func sendRequest(method: APIHelper.APIMethods, params: [String : String]) -> AnyPublisher<[Movie], Error> {
+        APIHelper.sendRequest(method: method, for: .movie, params: params)
             .decode(type: MovieDTO.self, decoder: JSONDecoder())
-            .tryMap { movieDTO -> [Movie] in
+            .flatMap { movieDTO -> Future<[Movie], Error> in
                 self.totalPages = movieDTO.totalPages
-                return movieDTO.items
+                return Future<[Movie], Error> { promise in
+                    promise(.success(movieDTO.items))
+                }
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
     
-    func fetchData(with params: [String : String], method: FetchMethod) {
-        switch method {
-        case .search:
-            APIHelper.sendRequest(method: .searchMovie, params: params)
-        default:
-            APIHelper.sendRequest(method: .loadMovie, params: params)
-        }
-    }
 }

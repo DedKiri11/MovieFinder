@@ -17,14 +17,16 @@ struct MovieList: View {
         VStack {
             Text(!isSearching ? "Top movies": "Search")
                 .font(.largeTitle)
-            SearchBar(searchText: $model.searchResponse, isSerching: $isSearching, action:
-                        model.search, cancelAction: model.cancelSearch)
-            .padding()
+            HStack {
+                SearchBar(searchText: $model.searchQuery, isSerching: $isSearching, action:
+                            model.search, cancelAction: model.cancelSearch)
+                .padding()
+            }
             ScrollView(.vertical) {
                 LazyVGrid(columns: [
                     .init(.adaptive(minimum: Constants.vGridColumnMinMovieList))
                 ], spacing: Constants.vGridSpacingMovieList) {
-                    ForEach(isSearching ? model.responseData : model.movies, id: \.self) { movie in
+                    ForEach(model.movies, id: \.self) { movie in
                         MovieListCard(movie: movie)
                             .onTapGesture {
                                 selectedMovie = movie

@@ -31,6 +31,10 @@ final class Injection {
         container.register(Repository.self) { _ in
             return MovieRepository()
         }
+        container.register(StaffDataService.self) { _ in
+            return StaffDataService()
+        }
+        
         return container
     }
 }

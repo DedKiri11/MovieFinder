@@ -77,10 +77,11 @@ struct MovieDetail: View {
                     .opacity(Constants.aboutMovieBackgroundOpacity)
                 )
                 .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
+                StaffList(model: StaffViewModel(id: Int(model.movie.kinopoiskId) ?? 0))
+                    .padding(.top)
             }
             .scrollIndicators(.hidden)
             .padding()
-            
         }
     }
 }

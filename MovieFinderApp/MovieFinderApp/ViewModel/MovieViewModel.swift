@@ -10,9 +10,10 @@ import Combine
 import RealmSwift
 
 class MovieViewModel: ObservableObject {
+    @Published var loadMovies: [Movie] = []
+    @Published var searchMovies: [Movie] = []
     @Published var movies: [Movie] = []
-    var responseData: [Movie] = []
-    @Published var searchResponse = ""
+    @Published var searchQuery = ""
     var cancelables = Set<AnyCancellable>()
     private var service: MovieDataService
     private var currentPage = 1
@@ -24,23 +25,38 @@ class MovieViewModel: ObservableObject {
             fatalError("Dependency Injection failed for MovieDataService")
         }
         self.service = service
-        loadSubscribe()
-        load(with: self.getDefaultQuery())
+        fetchMovies()
+        load()
     }
     
-    func loadSubscribe() {
-        service.getData()
+    func fetchMovies() {
+        service.getData(with: getDefaultQuery())
             .sink { camplition in
                 print(camplition)
             } receiveValue: { [weak self] movies in
-                self?.responseData = movies
-                self?.movies.append(contentsOf: self?.responseData ?? [])
+                self?.loadMovies.append(contentsOf: movies)
+                self?.load()
             }
             .store(in: &cancelables)
     }
     
-    func load(with params: [String : String] = [:]) {
-        service.fetchData(with: params, method: .load)
+    func fetchSearchMovies() {
+        service.getDataForSearch(with: getSearchQuery())
+            .sink { camplition in
+                print(camplition)
+            } receiveValue: { [weak self] movies in
+                self?.searchMovies = movies
+                self?.loadSearch()
+            }
+            .store(in: &cancelables)
+    }
+    
+    func load() {
+        movies = loadMovies
+    }
+    
+    func loadSearch() {
+        movies = searchMovies
     }
     
     func loadMoreItems() {
@@ -48,7 +64,7 @@ class MovieViewModel: ObservableObject {
         if self.currentPage <= totalPages {
             self.currentPage += 1
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.load(with: self.getDefaultQuery())
+                self.fetchMovies()
             }
             self.isLoadMore = false
         } else {
@@ -57,14 +73,12 @@ class MovieViewModel: ObservableObject {
     }
     
     func cancelSearch() {
-        self.responseData = []
-        self.movies = self.responseData
-        load(with: self.getDefaultQuery())
+        self.movies = self.loadMovies
     }
     
+    
     func search() {
-        self.currentPage = 1
-        self.service.fetchData(with: self.getSearchQuery(), method: .search)
+       fetchSearchMovies()
     }
     
     func getDefaultQuery() -> [String: String] {
@@ -72,6 +86,6 @@ class MovieViewModel: ObservableObject {
     }
     
     func getSearchQuery() -> [String: String] {
-        return ["keyword": self.searchResponse, "page": "\(self.currentPage)"]
+        return ["keyword": self.searchQuery, "page": "1"]
     }
 }

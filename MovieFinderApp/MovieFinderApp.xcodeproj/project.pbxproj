@@ -24,6 +24,14 @@
 		FD7661B62C61082900163B9C /* DateFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661B52C61082900163B9C /* DateFilterView.swift */; };
 		FD7661B82C61F42600163B9C /* ShareButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661B72C61F42600163B9C /* ShareButtonView.swift */; };
 		FD7661BA2C61F7A300163B9C /* ShareButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661B92C61F7A300163B9C /* ShareButtonViewModel.swift */; };
+		FD7661BC2C62296400163B9C /* Staff.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661BB2C62296400163B9C /* Staff.swift */; };
+		FD7661BF2C622D3800163B9C /* StaffList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661BE2C622D3800163B9C /* StaffList.swift */; };
+		FD7661C22C622D5E00163B9C /* StaffCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661C12C622D5E00163B9C /* StaffCard.swift */; };
+		FD7661C42C622D9100163B9C /* StaffViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661C32C622D9100163B9C /* StaffViewModel.swift */; };
+		FD7661C62C62347500163B9C /* StaffDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661C52C62347500163B9C /* StaffDataService.swift */; };
+		FD7661C92C6250D000163B9C /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661C82C6250D000163B9C /* FilterView.swift */; };
+		FD7661CB2C6251AD00163B9C /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661CA2C6251AD00163B9C /* FilterButtonView.swift */; };
+		FD7661CD2C62528900163B9C /* FilterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7661CC2C62528900163B9C /* FilterItem.swift */; };
 		FD7F66412C57804000A1D264 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7F66402C57804000A1D264 /* ProfileViewModel.swift */; };
 		FD835CF82C4E9F76002F731F /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD835CF72C4E9F76002F731F /* APIHelper.swift */; };
 		FD835CFD2C4EA1DC002F731F /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD835CFC2C4EA1DC002F731F /* MovieViewModel.swift */; };
@@ -84,6 +92,14 @@
 		FD7661B52C61082900163B9C /* DateFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFilterView.swift; sourceTree = "<group>"; };
 		FD7661B72C61F42600163B9C /* ShareButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButtonView.swift; sourceTree = "<group>"; };
 		FD7661B92C61F7A300163B9C /* ShareButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButtonViewModel.swift; sourceTree = "<group>"; };
+		FD7661BB2C62296400163B9C /* Staff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Staff.swift; sourceTree = "<group>"; };
+		FD7661BE2C622D3800163B9C /* StaffList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffList.swift; sourceTree = "<group>"; };
+		FD7661C12C622D5E00163B9C /* StaffCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffCard.swift; sourceTree = "<group>"; };
+		FD7661C32C622D9100163B9C /* StaffViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffViewModel.swift; sourceTree = "<group>"; };
+		FD7661C52C62347500163B9C /* StaffDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffDataService.swift; sourceTree = "<group>"; };
+		FD7661C82C6250D000163B9C /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		FD7661CA2C6251AD00163B9C /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
+		FD7661CC2C62528900163B9C /* FilterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterItem.swift; sourceTree = "<group>"; };
 		FD7F66402C57804000A1D264 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FD835CF72C4E9F76002F731F /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		FD835CFC2C4EA1DC002F731F /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3B1D852C53A37900817857 /* MovieDataService.swift */,
+				FD7661C52C62347500163B9C /* StaffDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -192,6 +209,23 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		FD7661BD2C622D1E00163B9C /* Staff */ = {
+			isa = PBXGroup;
+			children = (
+				FD7661C02C622D4200163B9C /* Components */,
+				FD7661BE2C622D3800163B9C /* StaffList.swift */,
+			);
+			path = Staff;
+			sourceTree = "<group>";
+		};
+		FD7661C02C622D4200163B9C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD7661C12C622D5E00163B9C /* StaffCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FD835CF62C4E9F50002F731F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +244,7 @@
 				FD5B48C72C5A7092002FF763 /* DetailViewModel.swift */,
 				FD9033C42C5B8574007C98AF /* FavoriteViewModel.swift */,
 				FD7661B92C61F7A300163B9C /* ShareButtonViewModel.swift */,
+				FD7661C32C622D9100163B9C /* StaffViewModel.swift */,
 			);
 			name = ViewModel;
 			path = MovieFinderApp/ViewModel;
@@ -219,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				FD835D012C4EA219002F731F /* Movie.swift */,
+				FD7661BB2C62296400163B9C /* Staff.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -226,6 +262,7 @@
 		FD835D072C4EA702002F731F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD7661BD2C622D1E00163B9C /* Staff */,
 				FD9033C82C5BB8F4007C98AF /* Favorites */,
 				FD3B1D8F2C53D8F100817857 /* Profile */,
 				FD8D428B2C512298000E5C6B /* MovieDetail */,
@@ -345,6 +382,9 @@
 			children = (
 				FD835D082C4EA726002F731F /* MovieListCard.swift */,
 				FDCA6CEB2C5926660037F6A3 /* SearchBar.swift */,
+				FD7661C82C6250D000163B9C /* FilterView.swift */,
+				FD7661CA2C6251AD00163B9C /* FilterButtonView.swift */,
+				FD7661CC2C62528900163B9C /* FilterItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -492,10 +532,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD13C7FA2C60B048001D2046 /* Repository.swift in Sources */,
+				FD7661C22C622D5E00163B9C /* StaffCard.swift in Sources */,
 				FD47584C2C57D3720048D05E /* Application.swift in Sources */,
+				FD7661C42C622D9100163B9C /* StaffViewModel.swift in Sources */,
 				FDCA6CE72C58E9910037F6A3 /* Constants.swift in Sources */,
 				FD8D42982C525BCC000E5C6B /* AuthorizationButton.swift in Sources */,
 				FD7661BA2C61F7A300163B9C /* ShareButtonViewModel.swift in Sources */,
+				FD7661BC2C62296400163B9C /* Staff.swift in Sources */,
 				FD835D022C4EA219002F731F /* Movie.swift in Sources */,
 				FD835CF82C4E9F76002F731F /* APIHelper.swift in Sources */,
 				FD9033CA2C5BB91D007C98AF /* FavoritesList.swift in Sources */,
@@ -504,9 +547,11 @@
 				FD835CFD2C4EA1DC002F731F /* MovieViewModel.swift in Sources */,
 				FD3B1D862C53A37900817857 /* MovieDataService.swift in Sources */,
 				FD7F66412C57804000A1D264 /* ProfileViewModel.swift in Sources */,
+				FD7661BF2C622D3800163B9C /* StaffList.swift in Sources */,
 				FD7661B82C61F42600163B9C /* ShareButtonView.swift in Sources */,
 				FD13C7FC2C60B508001D2046 /* RealmData.swift in Sources */,
 				FD9033BF2C5B7147007C98AF /* StarsMark.swift in Sources */,
+				FD7661C62C62347500163B9C /* StaffDataService.swift in Sources */,
 				FD7661B62C61082900163B9C /* DateFilterView.swift in Sources */,
 				FD9033CD2C5BB93F007C98AF /* FavoritesListTile.swift in Sources */,
 				FD9033C52C5B8574007C98AF /* FavoriteViewModel.swift in Sources */,
@@ -514,13 +559,16 @@
 				FD835D092C4EA726002F731F /* MovieListCard.swift in Sources */,
 				FD835D062C4EA491002F731F /* MovieDTO.swift in Sources */,
 				FD9033C72C5B9A14007C98AF /* HeartView.swift in Sources */,
+				FD7661C92C6250D000163B9C /* FilterView.swift in Sources */,
 				FD9012492C4E9E4D003465C1 /* ContentView.swift in Sources */,
+				FD7661CD2C62528900163B9C /* FilterItem.swift in Sources */,
 				FD835D0B2C4EA733002F731F /* MovieList.swift in Sources */,
 				FD9012472C4E9E4D003465C1 /* MovieFinderApp.swift in Sources */,
 				FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */,
 				FD53781E2C4FE7EF009E1D5A /* MovieDetail.swift in Sources */,
 				FDCA6CEC2C5926660037F6A3 /* SearchBar.swift in Sources */,
 				FD5B48C82C5A7092002FF763 /* DetailViewModel.swift in Sources */,
+				FD7661CB2C6251AD00163B9C /* FilterButtonView.swift in Sources */,
 				FD5B48C62C5A64EC002FF763 /* APIConstants.swift in Sources */,
 				FD3B1D892C53B22C00817857 /* Injection.swift in Sources */,
 				FDCA6CE92C58F57C0037F6A3 /* ProfileCard.swift in Sources */,
