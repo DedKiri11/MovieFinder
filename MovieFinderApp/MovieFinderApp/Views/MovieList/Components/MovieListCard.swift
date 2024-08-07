@@ -16,7 +16,7 @@ struct MovieListCard: View {
                 image.image?
                     .resizable()
             }
-            .frame(width: Constants.imageWidhtMovieListCard, height: Constants.imageHeightMovieListCard)
+            .frame(width: Constants.imageWidthMovieListCard, height: Constants.imageHeightMovieListCard)
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
             .scaledToFill()
         }

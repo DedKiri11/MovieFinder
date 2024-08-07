@@ -23,14 +23,14 @@ struct ProfileCard: View {
                             .resizable()
                             .scaledToFit()
                             .clipShape(Circle())
-                            .frame(width: Constants.imageWidhtProfileCard, height: Constants.imageHeightProfileCard)
+                            .frame(width: Constants.imageWidthProfileCard, height: Constants.imageHeightProfileCard)
                     }
                 } else {
                     Image(.unknown)
                         .resizable()
                         .scaledToFit()
                         .clipShape(Circle())
-                        .frame(width: Constants.imageWidhtProfileCard, height: Constants.imageHeightProfileCard)
+                        .frame(width: Constants.imageWidthProfileCard, height: Constants.imageHeightProfileCard)
                 }
                 Text(fullName)
                 logOutButton

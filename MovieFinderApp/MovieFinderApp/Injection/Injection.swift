@@ -34,7 +34,6 @@ final class Injection {
         container.register(StaffDataService.self) { _ in
             return StaffDataService()
         }
-        
         return container
     }
 }

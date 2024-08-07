@@ -15,19 +15,20 @@ struct HeartView: View {
             Image(systemName: isFavorite ? "heart.fill" : "heart")
                 .foregroundColor(.red)
                 .scaleEffect(scale)
-                .frame(width: 70, height: 70)
+                .frame(width: Constants.heartWidth, height: Constants.heartHeight)
                 .onTapGesture {
                     isFavorite.toggle()
                     withAnimation(.bouncy(duration: 0.5)) {
-                        scale = isFavorite ? 2.0 : 1.0
+                        scale = isFavorite ? Constants.scale2 : Constants.basicScale
                     }
             }
                 .onAppear {
                     withAnimation(.bouncy(duration: 0.5)) {
-                        scale = isFavorite ? 2.0 : 1.0
+                        scale = isFavorite ? Constants.scale2 : Constants.basicScale
                     }
                 }
         }
+
         .padding(.leading)
     }
 }

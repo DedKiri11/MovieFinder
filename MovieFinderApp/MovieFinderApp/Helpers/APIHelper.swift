@@ -20,6 +20,7 @@ class APIHelper {
         case loadMovie = "films/collections"
         case searchMovie = "films"
         case loadStaff = "staff"
+        case loadFilters = "films/filters"
     }
     
     enum APIBaseURL: String {

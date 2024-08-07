@@ -16,7 +16,6 @@ struct ContentView: View {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }
-                
                 FavoritesList()
                     .tabItem {
                         Label("List", systemImage: "list.and.film")

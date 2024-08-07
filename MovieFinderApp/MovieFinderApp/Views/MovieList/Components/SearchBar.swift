@@ -12,7 +12,6 @@ struct SearchBar: View {
     @Binding var isSerching: Bool
     var action: () -> Void
     var cancelAction: () -> Void
-    
     var body: some View {
         HStack {
             ZStack {

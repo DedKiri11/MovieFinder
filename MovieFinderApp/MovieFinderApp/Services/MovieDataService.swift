@@ -32,4 +32,15 @@ class MovieDataService {
             .eraseToAnyPublisher()
     }
     
+    func getFilterData() -> AnyPublisher<FiltersDTO, Error> {
+        return APIHelper.sendRequest(method: .loadFilters, for: .movie)
+            .decode(type: FiltersDTO.self, decoder: JSONDecoder())
+            .flatMap { filtersDTO -> Future<FiltersDTO, Error> in
+                return Future<FiltersDTO, Error> { promise in
+                    promise(.success(filtersDTO))
+                }
+            }
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
+    }
 }

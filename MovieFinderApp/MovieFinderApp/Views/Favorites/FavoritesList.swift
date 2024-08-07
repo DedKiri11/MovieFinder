@@ -10,7 +10,7 @@ import SwiftUI
 struct FavoritesList: View {
     @State var serchQuery = ""
     @StateObject var model = FavoriteViewModel()
-    var filteredMovies: [Movie]  {
+    var filteredMovies: [Movie] {
         if serchQuery.isEmpty {
             return model.isFavoriteMovies
         } else {
@@ -54,9 +54,6 @@ struct FavoritesList: View {
         .scrollIndicators(.hidden)
     }
 }
-
-
-
 
 #Preview {
     FavoritesList()

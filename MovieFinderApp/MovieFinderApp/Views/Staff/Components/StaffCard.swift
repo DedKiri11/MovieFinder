@@ -24,13 +24,12 @@ struct StaffCard: View {
                     .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
             }
-                
             Text(staff.nameRu ?? Constants.emptyString)
             Text(staff.description ?? Constants.emptyString)
                 .foregroundColor(.gray)
                 .lineLimit(1)
         }
-        .frame(width: 200, height: 200)
+        .frame(width: Constants.imageWidthStaffCard, height: Constants.imageHeightStaffCard)
         .padding()
         .background(
             Color.gray

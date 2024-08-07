@@ -96,9 +96,9 @@ class MovieRepository: Repository {
     
     func toMovieEntity(movie: Movie) -> MovieEntity {
         let kinopoiskId = String(movie.id)
-        let name = movie.name ?? ""
+        let name = movie.name ?? Constants.emptyString
         let nameOriginal = movie.nameOriginal
-        let genres = movie.genres?.compactMap { $0.genre }.joined(separator: ", ") ?? ""
+        let genres = movie.genres?.compactMap { $0.genre }.joined(separator: ", ") ?? Constants.emptyString
         
         let posterUrl = movie.posterUrl
         let posterUrlPreview = movie.posterUrlPreview
@@ -108,11 +108,11 @@ class MovieRepository: Repository {
         return MovieEntity(
             kinopoiskId: kinopoiskId,
             name: name,
-            nameOriginal: nameOriginal ?? "",
+            nameOriginal: nameOriginal ?? Constants.emptyString,
             posterUrl: posterUrl,
             posterUrlPreview: posterUrlPreview,
             genres: genres,
-            movieDescription: movieDescription ?? "",
+            movieDescription: movieDescription ?? Constants.emptyString,
             year: year,
             mark: movie.mark,
             ownerId: UserToken.token,

@@ -9,10 +9,14 @@ import Foundation
 
 struct Constants {
     static let cornerRadius15 = 15.0
+    static let cornerRadius50 = 50.0
     static let emptyString = ""
     static let lineLimit1 = 1
     static let opacity1 = 1.0
     static let opacity02 = 0.2
+    static let opacity05 = 0.5
+    static let basicScale = 1.0
+    static let scale2 = 2.0
     // MARK: AuthorizationButton
     static let heightOfButtonImageAuthButton = 40.0
     static let heightOfButtonTextAuthButton = 40.0
@@ -23,10 +27,13 @@ struct Constants {
     static let titlePaddingLeadingMovieDetail = 35.0
     static let vStackElementsSpacingMovieDetail = 12.0
     static let aboutMovieBackgroundOpacity = 0.2
+    static let maxMark = 5
     // MARK: MovieList
     static let vGridSpacingMovieList = 10.0
     static let vGridColumnMinMovieList = 100.0
     static let cardAnimationDurationMovieList = 0.7
+    static let filterSheetHeight = 600.0
+    static let filterButtonWidthMovieList = 50.0
     // MARK: SearchBar
     static let searchBarHeight = 50.0
     static let searchCancelButtonHeight = 20.0
@@ -35,11 +42,11 @@ struct Constants {
     static let borderWidthSearchBar = 2.0
     // MARK: MovieListCard
     static let imageHeightMovieListCard = 145.0
-    static let imageWidhtMovieListCard = 100.0
+    static let imageWidthMovieListCard = 100.0
     static let tileHeightMovieListCard = 353.0
     // MARK: ProfileCard
     static let imageHeightProfileCard = 200.0
-    static let imageWidhtProfileCard = 200.0
+    static let imageWidthProfileCard = 200.0
     static let paddingTopOfLogOutButton = 20.0
     // MARK: FavoritesListTile
     static let imageHeightFavoritesListTile = 100.0
@@ -49,4 +56,18 @@ struct Constants {
     static let positionXShareButton = 360.0
     static let positionYShareButton = 600.0
     static let boxWidthShareButton = 50.0
+    // MARK: StaffCard
+    static let imageHeightStaffCard = 200.0
+    static let imageWidthStaffCard = 200.0
+    // MARK: FilterView
+    static let cancellButtonSizeFilterView = 50.0
+    static let yearSelectorSheetHeight = 400.0
+    // MARK: FilterButtonList
+    static let filterButtonListSpacing = 20.0
+    // MARK: YearSelectorView
+    static let yearDiaposone = 1945...2024
+    static let pickerHeight = 150.0
+    // MARK: HeartView
+    static let heartWidth = 70.0
+    static let heartHeight = 70.0
 }

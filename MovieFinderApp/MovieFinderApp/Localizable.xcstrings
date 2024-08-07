@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld" : {
+
+    },
     "About" : {
       "localizations" : {
         "en" : {
@@ -17,12 +20,52 @@
         }
       }
     },
+    "Accept" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Принять"
+          }
+        }
+      }
+    },
+    "Cast" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Актеры"
+          }
+        }
+      }
+    },
+    "Country" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Страна"
+          }
+        }
+      }
+    },
     "Date" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дата"
+          }
+        }
+      }
+    },
+    "Director" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режиссер"
           }
         }
       }
@@ -39,6 +82,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вход"
+          }
+        }
+      }
+    },
+    "Filters" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фильтры"
+          }
+        }
+      }
+    },
+    "Genre" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Жанр"
           }
         }
       }
@@ -125,6 +188,16 @@
         }
       }
     },
+    "Relize year: %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год выхода: %@"
+          }
+        }
+      }
+    },
     "Relize year: %lld" : {
       "localizations" : {
         "ru" : {
@@ -155,12 +228,52 @@
         }
       }
     },
+    "Select year" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать год"
+          }
+        }
+      }
+    },
+    "Select year:" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбрать год:"
+          }
+        }
+      }
+    },
+    "Selected year: %lld" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выбранный год: %lld"
+          }
+        }
+      }
+    },
     "Sign in with Google" : {
       "localizations" : {
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Войти с помощью Google"
+          }
+        }
+      }
+    },
+    "text" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текст"
           }
         }
       }
@@ -187,6 +300,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Топ фильмов"
+          }
+        }
+      }
+    },
+    "Year" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Год"
           }
         }
       }

@@ -16,10 +16,9 @@ struct StaffList: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(model.directors, id: \.self) { staff in
-                            StaffCard(staff: staff)
+                        StaffCard(staff: staff)
                     }
                 }
-                
             }
             .scrollIndicators(.hidden)
             Text("Cast")
@@ -27,11 +26,10 @@ struct StaffList: View {
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(model.actors, id: \.self) { staff in
-                            StaffCard(staff: staff)
+                        StaffCard(staff: staff)
                     }
                 }
-                }
-               
+            }
             .scrollIndicators(.hidden)
         }
     }

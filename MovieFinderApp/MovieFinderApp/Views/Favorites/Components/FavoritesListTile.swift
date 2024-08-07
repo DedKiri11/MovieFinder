@@ -22,18 +22,15 @@ struct FavoritesListTile: View {
                 Text(movie.name ?? "")
                     .lineLimit(1)
                     .font(.headline)
-                
                 Text(movie.genres?
                     .compactMap {
                         $0.genre
                     }.joined(separator: ", ") ?? "")
                 .lineLimit(1)
-                
                 Text(String(movie.year))
             }
             .foregroundStyle(Color.white)
             .padding(.leading)
-            
             Spacer()
         }
         .background(Color.gray
@@ -42,7 +39,6 @@ struct FavoritesListTile: View {
         .frame(width: Constants.tileHeightFavoritesListTile)
     }
 }
-
 
 #Preview {
     FavoritesListTile(movie: Movie.default)

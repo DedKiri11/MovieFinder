@@ -50,10 +50,10 @@ class DetailViewModel: ObservableObject {
     }
     
     func getMark() -> Int {
-       return self.movie.mark
+        return self.movie.mark
     }
     
     func getIsFavorite() -> Bool {
-       return self.movie.isFavorite
+        return self.movie.isFavorite
     }
 }

@@ -16,7 +16,6 @@ struct Staff: Codable, Identifiable, Hashable {
     var professionText: String?
     var professionKey: String?
     
-    
     static let `default` = Staff(id: 1,
                                  nameRu: "Винс Гиллиган",
                                  nameEn: "Vince Gilligan",

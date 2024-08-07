@@ -15,7 +15,7 @@ struct ActivityView: UIViewControllerRepresentable {
         let controller = UIActivityViewController(activityItems: items, applicationActivities: applicationActivities)
         return controller
     }
-
+    
     func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
 }
 
@@ -25,28 +25,28 @@ struct ShareButtonView: View {
         ShareButtonViewModel(movie: movie)
     }
     @State private var showingShareSheet = false
-        var body: some View {
-            ZStack {
-                Button(action: {
-                    showingShareSheet = true
-                }) {
-                    HStack {
-                        Image(systemName: "square.and.arrow.up")
-                            .font(.title3)
-                            .frame(width: Constants.boxWidthShareButton, alignment: .leading)
-                            .padding()
-                            .background(Color.blue)
-                            .foregroundColor(.white)
+    var body: some View {
+        ZStack {
+            Button(action: {
+                showingShareSheet = true
+            }, label: {
+                HStack {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.title3)
+                        .frame(width: Constants.boxWidthShareButton, alignment: .leading)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
                         .cornerRadius(Constants.cornerRadius15)
-                    }
                 }
-                .sheet(isPresented: $showingShareSheet) {
-                    ActivityView(items:[model.share()])
-                }
+            })
+            .sheet(isPresented: $showingShareSheet) {
+                ActivityView(items:[model.share()])
             }
-            .zIndex(2)
-            .position(x: Constants.positionXShareButton, y: Constants.positionYShareButton)
         }
+        .zIndex(2)
+        .position(x: Constants.positionXShareButton, y: Constants.positionYShareButton)
+    }
 }
 
 #Preview {

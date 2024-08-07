@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MovieDetail: View {
-    let maxRating = 5
+    let maxRating = Constants.maxMark
     @Environment(\.dismiss) var dismiss
     @StateObject var model: DetailViewModel
     var movie: Movie
