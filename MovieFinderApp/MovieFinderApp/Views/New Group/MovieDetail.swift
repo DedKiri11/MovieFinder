@@ -12,14 +12,15 @@ struct MovieDetail: View {
     @Environment(\.dismiss) var dismiss
     @GestureState private var dragOffset = CGSize.zero
     @StateObject var model: DetailViewModel
+    @State var isFavoriteView: Bool = false
     var movie: Movie { model.movie }
     var body: some View {
         let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyString
         NavigationStack {
             ZStack {
-                NavigationSwipeView(movie: movie)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .zIndex(1.0)
+                    NavigationSwipeView(movie: movie)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .zIndex(1.0)
                 ScrollView(.vertical) {
                     HStack {
                         VStack {

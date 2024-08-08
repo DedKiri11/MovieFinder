@@ -23,7 +23,6 @@ class FavoriteViewModel: ObservableObject {
             self.isFavoriteMovies = self.isFavoriteMovies.sorted {
                 $0.dateOfAded < $1.dateOfAded
             }
-            
         } else {
             self.isFavoriteMovies = self.isFavoriteMovies.sorted {
                 $0.dateOfAded > $1.dateOfAded

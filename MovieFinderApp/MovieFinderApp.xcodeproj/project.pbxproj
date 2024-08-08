@@ -46,6 +46,7 @@
 		FD86FB4F2C635039006AA1CF /* YearSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD86FB4E2C635039006AA1CF /* YearSelectorView.swift */; };
 		FD86FB512C6355AD006AA1CF /* FilterActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD86FB502C6355AD006AA1CF /* FilterActionButton.swift */; };
 		FD8B5A0E2C64F5000012F001 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A0D2C64F5000012F001 /* ListView.swift */; };
+		FD8B5A102C650D430012F001 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A0F2C650D430012F001 /* ShareView.swift */; };
 		FD8D42872C5118DB000E5C6B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD8D42862C5118DB000E5C6B /* RealmSwift */; };
 		FD8D42882C51192B000E5C6B /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FD8D42862C5118DB000E5C6B /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D428D2C5122DA000E5C6B /* ProfileView.swift */; };
@@ -126,6 +127,7 @@
 		FD86FB4E2C635039006AA1CF /* YearSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearSelectorView.swift; sourceTree = "<group>"; };
 		FD86FB502C6355AD006AA1CF /* FilterActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterActionButton.swift; sourceTree = "<group>"; };
 		FD8B5A0D2C64F5000012F001 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		FD8B5A0F2C650D430012F001 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		FD8D428D2C5122DA000E5C6B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FD8D42972C525BCC000E5C6B /* AuthorizationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationButton.swift; sourceTree = "<group>"; };
 		FD9012432C4E9E4D003465C1 /* MovieFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -389,6 +391,7 @@
 				FD9033BE2C5B7147007C98AF /* StarsMark.swift */,
 				FD9033C62C5B9A14007C98AF /* HeartView.swift */,
 				FD7661B72C61F42600163B9C /* ShareButtonView.swift */,
+				FD8B5A0F2C650D430012F001 /* ShareView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				FD9033C52C5B8574007C98AF /* FavoriteViewModel.swift in Sources */,
 				FD5B48D02C5A82C8002FF763 /* UserToken.swift in Sources */,
 				FD835D092C4EA726002F731F /* MovieListCard.swift in Sources */,
+				FD8B5A102C650D430012F001 /* ShareView.swift in Sources */,
 				FD835D062C4EA491002F731F /* MovieDTO.swift in Sources */,
 				FD9033C72C5B9A14007C98AF /* HeartView.swift in Sources */,
 				FD7661C92C6250D000163B9C /* FilterView.swift in Sources */,

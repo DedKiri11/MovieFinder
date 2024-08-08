@@ -19,15 +19,13 @@ struct ListView: View {
                     ) {
                         FavoritesListTile(movie: movie)
                     }
-                    .opacity(showItems ? 1 : 0)
-                    .offset(y: showItems ? 0 : 1)
                     .animation(
                         .spring(
                             duration: Constants.cardAnimationDurationMovieList
                         )
                         .delay(
                             Double(
-                                movies.firstIndex(of: movie)!) * 0.05
+                                movies.firstIndex(of: movie)!) * 0.1
                         ),
                         value: showItems)
                 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MovieList: View {
     @EnvironmentObject var model: MovieViewModel
-    @State private var showItems = false
+    @State private var showItems = true
     @State var isSearching = false
     @State private var selectedMovie: Movie?
     @State var isFilterViewPresented: Bool = false
@@ -25,6 +25,7 @@ struct MovieList: View {
                 Button(
                     action: {
                         if model.isFilter {
+                            cardAnimation()
                             model.load()
                             model.isFilter.toggle()
                         } else {
@@ -51,8 +52,10 @@ struct MovieList: View {
                                 model.cancelSearch()
                             } else {
                                 model.isFilter = true
+                                cardAnimation()
                                 model.filter()
                             }
+                            
                         }
                 }
             }
@@ -67,12 +70,10 @@ struct MovieList: View {
                                     selectedMovie = movie
                                 }
                         }
-                        .id(0)
                         .onAppear {
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                                showItems = true
-                            }
+                            cardAnimation()
                         }
+                        .id(0)
                     }
                     if model.isLoadMore || !showItems {
                         ProgressView()
@@ -81,10 +82,11 @@ struct MovieList: View {
                             Button(action: {
                                 model.isLoadMore = true
                                 if model.isFilter {
-                                    withAnimation {
+                                    withAnimation(.spring(duration: 1)) {
                                         proxy.scrollTo(0, anchor: .bottom)
                                     }
                                 }
+                                cardAnimation()
                                 model.loadMoreItems()
                             }, label: {
                                 Text(model.isEnd ? "This is the end" : "Load more")
@@ -116,9 +118,16 @@ struct MovieList: View {
             }
         }
     }
+    func cardAnimation() {
+        showItems.toggle()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            showItems.toggle()
+        }
+    }
+
 }
+
 
 #Preview {
     MovieList()
-        
 }
