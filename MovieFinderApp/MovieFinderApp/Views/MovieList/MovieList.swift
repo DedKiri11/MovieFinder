@@ -8,40 +8,47 @@
 import SwiftUI
 
 struct MovieList: View {
-    @StateObject var model = MovieViewModel()
+    @EnvironmentObject var model: MovieViewModel
     @State private var showItems = false
     @State var isSearching = false
     @State private var selectedMovie: Movie?
-    @State var isFilter: Bool = false
+    @State var isFilterViewPresented: Bool = false
     
     var body: some View {
         VStack {
-            Text(!isSearching ? "Top movies": "Search")
+            Text(isSearching || model.isFilter ? "Search" : "Top movies")
                 .font(.largeTitle)
             HStack {
                 SearchBar(searchText: $model.searchQuery, isSerching: $isSearching, action:
                             model.search, cancelAction: model.cancelSearch)
                 .padding()
                 Button(
-                    action: { isFilter.toggle() },
+                    action: {
+                        if model.isFilter {
+                            model.load()
+                            model.isFilter.toggle()
+                        } else {
+                            isFilterViewPresented.toggle()
+                        }
+                    },
                     label: {
                         VStack {
-                            Image(systemName: "list.clipboard")
+                            Image(systemName: model.isFilter ? "return.left" : "list.clipboard")
                                 .frame(width: Constants.filterButtonWidthMovieList)
-                            Text("Filters")
+                            Text(model.isFilter ? "Cancel" : "Filters")
                                 .font(.caption)
                         }
                         .foregroundColor(.white)
                         .padding(.trailing)
                     })
-                .sheet(isPresented: $isFilter) {
+                .sheet(isPresented: $isFilterViewPresented) {
                     FilterView(filterQuery: $model.filterQuery)
                         .presentationDetents([.height(Constants.filterSheetHeight)])
                         .presentationBackground(.thinMaterial)
                         .onDisappear {
-                            model.cancelSearch()
                             if model.filterQuery.isEmpty {
                                 model.isFilter = false
+                                model.cancelSearch()
                             } else {
                                 model.isFilter = true
                                 model.filter()
@@ -93,11 +100,19 @@ struct MovieList: View {
                     }
                 }
                 .fullScreenCover(item: $selectedMovie) { movie in
-                    MovieDetail(model: DetailViewModel(movie: movie), movie: movie)
+                    MovieDetail(
+                        model: DetailViewModel(
+                            movie: movie,
+                            repository:  Injection.shared.container.resolve(Repository.self)!
+                        )
+                    )
                 }
                 .scrollIndicators(.hidden)
                 .opacity(showItems ? Constants.opacity1 : Constants.opacity02)
                 .animation(.spring(duration: Constants.cardAnimationDurationMovieList), value: showItems)
+                .refreshable {
+                    model.refresh()
+                }
             }
         }
     }
@@ -105,4 +120,5 @@ struct MovieList: View {
 
 #Preview {
     MovieList()
+        
 }

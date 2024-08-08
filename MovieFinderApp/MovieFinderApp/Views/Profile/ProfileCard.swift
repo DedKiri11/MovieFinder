@@ -18,13 +18,10 @@ struct ProfileCard: View {
                 Text("Profile")
                     .font(.title)
                 if let image = image {
-                    AsyncImage(url: URL(string: image)) { image in
-                        image.image?
-                            .resizable()
-                            .scaledToFit()
-                            .clipShape(Circle())
-                            .frame(width: Constants.imageWidthProfileCard, height: Constants.imageHeightProfileCard)
-                    }
+                    AsyncImageView(imageURL: image)
+                        .clipShape(Circle())
+                        .frame(width: Constants.imageWidthProfileCard, height: Constants.imageHeightProfileCard)
+                    
                 } else {
                     Image(.unknown)
                         .resizable()

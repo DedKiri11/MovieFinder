@@ -11,19 +11,9 @@ struct StaffCard: View {
     var staff: Staff
     var body: some View {
         VStack {
-            if let poster = staff.posterUrl {
-                AsyncImage(url: URL(string: poster)) { image in
-                    image.image?
-                        .resizable()
-                        .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
-                }
-            } else {
-                Image(.unknown)
-                    .resizable()
-                    .scaledToFit()
+            AsyncImageView(imageURL: staff.posterUrl)
                     .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
-            }
+                    .scaledToFit()
             Text(staff.nameRu ?? Constants.emptyString)
             Text(staff.description ?? Constants.emptyString)
                 .foregroundColor(.gray)

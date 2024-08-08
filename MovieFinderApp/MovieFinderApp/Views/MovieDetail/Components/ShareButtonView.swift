@@ -21,34 +21,26 @@ struct ActivityView: UIViewControllerRepresentable {
 
 struct ShareButtonView: View {
     var movie: Movie
+    @Binding var isActive: Bool
     var model: ShareButtonViewModel {
         ShareButtonViewModel(movie: movie)
     }
     @State private var showingShareSheet = false
     var body: some View {
-        ZStack {
-            Button(action: {
-                showingShareSheet = true
-            }, label: {
-                HStack {
+        NavigationStack {
+            ZStack {
+            
                     Image(systemName: "square.and.arrow.up")
-                        .font(.title3)
-                        .frame(width: Constants.boxWidthShareButton, alignment: .leading)
-                        .padding()
-                        .background(Color.blue)
                         .foregroundColor(.white)
-                        .cornerRadius(Constants.cornerRadius15)
-                }
-            })
-            .sheet(isPresented: $showingShareSheet) {
-                ActivityView(items:[model.share()])
+                        .navigationDestination(isPresented: $isActive) {
+                            ActivityView(items: [model.share()])
+                            }
             }
+           
         }
-        .zIndex(2)
-        .position(x: Constants.positionXShareButton, y: Constants.positionYShareButton)
     }
 }
 
 #Preview {
-    ShareButtonView(movie: Movie.default)
+    ShareButtonView(movie: Movie.default, isActive: .constant(false))
 }

@@ -31,4 +31,7 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+        .environmentObject(MovieViewModel(service: MovieDataService()))
+        .environmentObject(ProfileViewModel())
+        .environmentObject(FavoriteViewModel(repository: MovieRepository()))
 }

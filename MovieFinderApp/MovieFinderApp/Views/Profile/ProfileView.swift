@@ -10,7 +10,7 @@ import GoogleSignInSwift
 import GoogleSignIn
 
 struct ProfileView: View {
-    @StateObject var model = ProfileViewModel()
+    @EnvironmentObject var model: ProfileViewModel
     @State var alertColor = Color.gray
     var body: some View {
         if !model.isLogin {

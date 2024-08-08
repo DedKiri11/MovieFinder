@@ -23,10 +23,7 @@ class MovieViewModel: ObservableObject {
     private var filterPage = 1
     private var loadPage = 1
     
-    init() {
-        guard let service = Injection.shared.container.resolve(MovieDataService.self) else {
-            fatalError("Dependency Injection failed for MovieDataService")
-        }
+    init(service: MovieDataService) {
         self.service = service
         fetchMovies()
         load()
@@ -67,6 +64,14 @@ class MovieViewModel: ObservableObject {
     
     func load() {
         movies = loadMovies
+    }
+    
+    func refresh() {
+        if loadMovies.isEmpty {
+            fetchMovies()
+        } else {
+            load()
+        }
     }
     
     func loadSearch() {

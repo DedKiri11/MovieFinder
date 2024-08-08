@@ -13,10 +13,7 @@ class FavoriteViewModel: ObservableObject {
     private var repository: Repository
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
-        guard let repository = Injection.shared.container.resolve(Repository.self) else {
-            fatalError("Dependency Injection failed for IsFavoriteMovieRepository")
-        }
+    init(repository: Repository) {
         self.repository = repository
         bindRepository()
     }

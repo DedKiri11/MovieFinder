@@ -12,10 +12,7 @@ struct MovieListCard: View {
     var movie: Movie
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: movie.posterUrl)) { image in
-                image.image?
-                    .resizable()
-            }
+            AsyncImageView(imageURL: movie.posterUrl)
             .frame(width: Constants.imageWidthMovieListCard, height: Constants.imageHeightMovieListCard)
             .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
             .scaledToFill()

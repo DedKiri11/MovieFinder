@@ -18,10 +18,10 @@ struct StarsMark: View {
                     .foregroundColor(.yellow)
                     .rotationEffect(.degrees(rotation))
                     .onTapGesture {
-                        withAnimation(.easeInOut(duration: 0.5)) {
+                        withAnimation(.spring(duration: 0.5)) {
                             mark = number
                         }
-                            withAnimation(.easeInOut(duration: 1)) {
+                            withAnimation(.spring(duration: 1)) {
                                 rotation += 360
                             }
                     }

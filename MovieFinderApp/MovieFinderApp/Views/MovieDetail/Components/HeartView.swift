@@ -17,18 +17,18 @@ struct HeartView: View {
                 .scaleEffect(scale)
                 .frame(width: Constants.heartWidth, height: Constants.heartHeight)
                 .onTapGesture {
-                    isFavorite.toggle()
-                    withAnimation(.bouncy(duration: 0.5)) {
+                    withAnimation(.spring(duration: 0.5)) {
+                        isFavorite.toggle()
                         scale = isFavorite ? Constants.scale2 : Constants.basicScale
                     }
-            }
+                }
                 .onAppear {
-                    withAnimation(.bouncy(duration: 0.5)) {
+                    withAnimation(.spring(duration: 1)) {
                         scale = isFavorite ? Constants.scale2 : Constants.basicScale
                     }
                 }
         }
-
+        
         .padding(.leading)
     }
 }

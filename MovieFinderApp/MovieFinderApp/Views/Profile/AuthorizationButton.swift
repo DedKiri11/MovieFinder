@@ -33,6 +33,7 @@ struct AuthorizationButton: View {
             )
             .overlay(RoundedRectangle(cornerRadius: Constants.cornerRadius15)
                 .stroke(Color.gray))
+            .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
         })
     }
 }
