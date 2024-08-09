@@ -12,12 +12,12 @@ class FavoriteViewModel: ObservableObject {
     @Published var isLatest: Bool = true
     private var repository: Repository
     private var cancellables = Set<AnyCancellable>()
-    
+
     init(repository: Repository) {
         self.repository = repository
         bindRepository()
     }
-    
+
     func filterByDate() {
         if self.isLatest {
             self.isFavoriteMovies = self.isFavoriteMovies.sorted {
@@ -29,7 +29,7 @@ class FavoriteViewModel: ObservableObject {
             }
         }
     }
-    
+
     private func bindRepository() {
         repository.objectsPublisher
             .receive(on: RunLoop.main)

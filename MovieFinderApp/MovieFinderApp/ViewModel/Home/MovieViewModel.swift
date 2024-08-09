@@ -22,13 +22,13 @@ class MovieViewModel: ObservableObject {
     private var service: MovieDataService
     private var filterPage = 1
     private var loadPage = 1
-    
+
     init(service: MovieDataService) {
         self.service = service
         fetchMovies()
         load()
     }
-    
+
     func fetchMovies() {
         service.getData(with: getDefaultQuery())
             .sink { camplition in
@@ -39,7 +39,7 @@ class MovieViewModel: ObservableObject {
             }
             .store(in: &cancelables)
     }
-    
+
     func fetchSearchMovies() {
         service.getDataForSearch(with: getSearchQuery())
             .sink { camplition in
@@ -50,7 +50,7 @@ class MovieViewModel: ObservableObject {
             }
             .store(in: &cancelables)
     }
-    
+
     func fetchFilteredMovies() {
         service.getDataForSearch(with: filterQuery)
             .sink { camplition in
@@ -61,11 +61,11 @@ class MovieViewModel: ObservableObject {
             }
             .store(in: &cancelables)
     }
-    
+
     func load() {
         movies = loadMovies
     }
-    
+
     func refresh() {
         if loadMovies.isEmpty {
             fetchMovies()
@@ -73,11 +73,11 @@ class MovieViewModel: ObservableObject {
             load()
         }
     }
-    
+
     func loadSearch() {
         movies = searchMovies
     }
-    
+
     func loadMoreItems() {
         let totalPages = self.service.totalPages
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
@@ -96,13 +96,13 @@ class MovieViewModel: ObservableObject {
         }
         self.isLoadMore = false
     }
-    
+
     func cancelSearch() {
         self.movies = self.loadMovies
         self.filterPage = 1
         self.isFilter = false
     }
-    
+
     func filter() {
         self.isFilter = true
         if !self.searchQuery.isEmpty {
@@ -110,15 +110,15 @@ class MovieViewModel: ObservableObject {
         }
         fetchFilteredMovies()
     }
-    
+
     func search() {
         fetchSearchMovies()
     }
-    
+
     func getDefaultQuery() -> [String: String] {
         return ["type": "TOP_250_MOVIES", "page": "\(self.loadPage)"]
     }
-    
+
     func getSearchQuery() -> [String: String] {
         return ["keyword": self.searchQuery, "page": "1"]
     }

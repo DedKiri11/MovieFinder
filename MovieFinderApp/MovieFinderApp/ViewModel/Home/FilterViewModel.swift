@@ -17,7 +17,7 @@ class FilterViewModel: ObservableObject {
     @Published var relizeYear: Int = 0
     var cancelables = Set<AnyCancellable>()
     private var service: MovieDataService
-    
+
     init() {
         guard let service = Injection.shared.container.resolve(MovieDataService.self) else {
             fatalError("Dependency Injection failed for MovieDataService")
@@ -25,7 +25,7 @@ class FilterViewModel: ObservableObject {
         self.service = service
         fetchFilters()
     }
-    
+
     func fetchFilters() {
         service.getFilterData()
             .sink { camplition in
@@ -36,7 +36,7 @@ class FilterViewModel: ObservableObject {
             }
             .store(in: &cancelables)
     }
-    
+
     func getQuery() -> [String : String] {
         var query: [String : String] = [:]
         if selectedCountryId != 0 {
@@ -53,11 +53,11 @@ class FilterViewModel: ObservableObject {
         }
         return query
     }
-    
+
     func getSearchedCountries(query: String) -> [CountryDTO] {
         return self.countries.filter { $0.country!.localizedCaseInsensitiveContains(query) }
     }
-    
+
     func getSearchedGenres(query: String) -> [GenreDTO] {
         return self.genres.filter { $0.genre!.localizedCaseInsensitiveContains(query) }
     }

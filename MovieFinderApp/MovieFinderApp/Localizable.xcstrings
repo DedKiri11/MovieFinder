@@ -77,6 +77,16 @@
         }
       }
     },
+    "Description" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Описание"
+          }
+        }
+      }
+    },
     "Director" : {
       "localizations" : {
         "ru" : {
@@ -185,6 +195,26 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выйти из профиля"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
+          }
+        }
+      }
+    },
+    "Name of movie" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название фильма"
           }
         }
       }
@@ -341,6 +371,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Это конец списка"
+          }
+        }
+      }
+    },
+    "Title" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заголовок"
           }
         }
       }

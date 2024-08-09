@@ -16,7 +16,7 @@ class DetailViewModel: ObservableObject {
     @Published var isLogined: Bool = !UserToken.token.isEmpty
     @Published var isFavorite: Bool = false
     private var repository: Repository
-    
+
     init(movie: Movie, repository: Repository) {
         self.movie = movie
         self.repository = repository
@@ -27,19 +27,19 @@ class DetailViewModel: ObservableObject {
         self.mark = getMark()
         self.isFavorite = getIsFavorite()
     }
-    
+
     func updateMovie() {
         if self.mark != 0, self.isAded {
             self.repository.update(movie: self.movieEntity, mark: self.mark, isFavorite: self.isFavorite)
         }
     }
-    
+
     func deleteMovie() {
         if self.mark == 0, self.isAded, !self.isFavorite {
             self.repository.delete(movie: self.movieEntity)
         }
     }
-    
+
     func saveMovie() {
         if (self.mark != 0 || self.isFavorite), self.isLogined {
             self.movieEntity.mark = self.mark
@@ -47,11 +47,11 @@ class DetailViewModel: ObservableObject {
             self.repository.create(movie: self.movieEntity)
         }
     }
-    
+
     func getMark() -> Int {
         return self.movieEntity.mark
     }
-    
+
     func getIsFavorite() -> Bool {
         return self.movieEntity.isFavorite
     }

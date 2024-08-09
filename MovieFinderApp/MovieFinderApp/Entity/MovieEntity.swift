@@ -22,7 +22,7 @@ class MovieEntity: Object, ObjectKeyIdentifiable {
     @Persisted var isFavorite: Bool
     @Persisted var ownerId: String
     @Persisted var dataOfCreation: Date
-    
+
     convenience init(kinopoiskId: String, name: String, nameOriginal: String, posterUrl: String, posterUrlPreview: String, genres: String, movieDescription: String, year: String, mark: Int, ownerId: String, isFavorite: Bool) {
         self.init()
         self.id = UUID().uuidString

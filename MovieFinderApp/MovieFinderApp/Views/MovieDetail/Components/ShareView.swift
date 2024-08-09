@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ShareView: UIViewControllerRepresentable {
     var items: [Any]
-    var applicationActivities: [UIActivity]? = nil
-    
+    var applicationActivities: [UIActivity]?
+
     func makeUIViewController(context: Context) -> UIActivityViewController {
         let controller = UIActivityViewController(activityItems: items, applicationActivities: applicationActivities)
         return controller
     }
-    
-    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
-    
-}
 
+    func updateUIViewController(_ uiViewController: UIActivityViewController, context: Context) {}
+
+}

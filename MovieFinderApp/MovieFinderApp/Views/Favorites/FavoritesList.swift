@@ -18,7 +18,7 @@ struct FavoritesList: View {
             return model.isFavoriteMovies.filter { $0.name?.localizedCaseInsensitiveContains(serchQuery) ?? false }
         }
     }
-    
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -41,7 +41,7 @@ struct FavoritesList: View {
         }
     }
 }
-                         
+
 #Preview {
     FavoritesList()
         .environmentObject(FavoriteViewModel(repository: MovieRepository()))

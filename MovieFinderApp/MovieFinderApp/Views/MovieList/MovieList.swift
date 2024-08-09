@@ -13,7 +13,7 @@ struct MovieList: View {
     @State var isSearching = false
     @State private var selectedMovie: Movie?
     @State var isFilterViewPresented: Bool = false
-    
+
     var body: some View {
         VStack {
             Text(isSearching || model.isFilter ? "Search" : "Top movies")
@@ -55,7 +55,6 @@ struct MovieList: View {
                                 cardAnimation()
                                 model.filter()
                             }
-                            
                         }
                 }
             }
@@ -64,6 +63,8 @@ struct MovieList: View {
                     LazyVGrid(columns: [
                         .init(.adaptive(minimum: Constants.vGridColumnMinMovieList))
                     ], spacing: Constants.vGridSpacingMovieList) {
+                        CustomMovieList()
+                            .environmentObject(Injection.shared.container.resolve(CustomMovieViewModel.self)!)
                         ForEach(model.movies, id: \.self) { movie in
                             MovieListCard(movie: movie)
                                 .onTapGesture {
@@ -124,9 +125,7 @@ struct MovieList: View {
             showItems.toggle()
         }
     }
-
 }
-
 
 #Preview {
     MovieList()

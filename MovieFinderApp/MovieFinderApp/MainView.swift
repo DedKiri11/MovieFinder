@@ -8,7 +8,7 @@
 import SwiftUI
 import GoogleSignIn
 
-struct ContentView: View {
+struct MainView: View {
     var body: some View {
         VStack {
             TabView {
@@ -30,7 +30,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    MainView()
         .environmentObject(MovieViewModel(service: MovieDataService()))
         .environmentObject(ProfileViewModel())
         .environmentObject(FavoriteViewModel(repository: MovieRepository()))

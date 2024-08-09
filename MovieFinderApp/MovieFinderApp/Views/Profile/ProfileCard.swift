@@ -21,7 +21,7 @@ struct ProfileCard: View {
                     AsyncImageView(imageURL: image)
                         .clipShape(Circle())
                         .frame(width: Constants.imageWidthProfileCard, height: Constants.imageHeightProfileCard)
-                    
+
                 } else {
                     Image(.unknown)
                         .resizable()

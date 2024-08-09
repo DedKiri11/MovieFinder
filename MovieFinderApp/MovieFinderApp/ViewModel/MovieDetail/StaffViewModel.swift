@@ -13,12 +13,12 @@ class StaffViewModel: ObservableObject {
     @Published var directors: [Staff] = []
     var cancelables = Set<AnyCancellable>()
     private var service: StaffDataService
-    
+
     enum ProffessionKey: String {
         case actor = "ACTOR"
         case director = "DIRECTOR"
     }
-    
+
     init(id: Int) {
         guard let service = Injection.shared.container.resolve(StaffDataService.self) else {
             fatalError("Dependency Injection failed for MovieDataService")
@@ -26,7 +26,7 @@ class StaffViewModel: ObservableObject {
         self.service = service
         fetchStaff(id: id)
     }
-    
+
     func fetchStaff(id: Int) {
         service.getDataAboutStaff(with: ["filmId" : "\(id)"])
             .sink { camplition in

@@ -11,7 +11,7 @@ struct FilterButtonList: View {
     @State var activeButtonIndex: Int = -1
     @Binding var currentId: Int
     var filterNames: [(String, Int)]
-    
+
     var body: some View {
         ScrollView(.horizontal) {
             HStack(spacing: Constants.filterButtonListSpacing) {
@@ -36,4 +36,3 @@ struct FilterButtonList: View {
         .scrollIndicators(.hidden)
     }
 }
-

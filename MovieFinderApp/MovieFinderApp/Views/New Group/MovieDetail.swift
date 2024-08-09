@@ -12,15 +12,15 @@ struct MovieDetail: View {
     @Environment(\.dismiss) var dismiss
     @GestureState private var dragOffset = CGSize.zero
     @StateObject var model: DetailViewModel
-    @State var isFavoriteView: Bool = false
+    var isCustomMovie: Bool = false
     var movie: Movie { model.movie }
     var body: some View {
         let name = (movie.name ?? movie.nameOriginal) ?? Constants.emptyString
         NavigationStack {
             ZStack {
-                    NavigationSwipeView(movie: movie)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .zIndex(1.0)
+                NavigationSwipeView(movie: movie)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .zIndex(1.0)
                 ScrollView(.vertical) {
                     HStack {
                         VStack {
@@ -45,6 +45,7 @@ struct MovieDetail: View {
                             .padding(.leading, Constants.titlePaddingLeadingMovieDetail)
                         Spacer()
                         HeartView(isFavorite: $model.isFavorite)
+                            .opacity(isCustomMovie ? 0 : 1)
                     }
                     .navigationBarBackButtonHidden(true)
                     .zIndex(0)
@@ -58,8 +59,10 @@ struct MovieDetail: View {
                         Spacer()
                     }
                     if model.isLogined {
-                        StarsMark(mark: $model.mark)
-                            .padding()
+                        if !isCustomMovie {
+                            StarsMark(mark: $model.mark)
+                                .padding()
+                        }
                     } else {
                         Text("If you want to rate movies you need to log in")
                     }
@@ -79,8 +82,10 @@ struct MovieDetail: View {
                         .opacity(Constants.aboutMovieBackgroundOpacity)
                     )
                     .clipShape(RoundedRectangle(cornerRadius: Constants.cornerRadius15))
-                    StaffList(model: StaffViewModel(id: Int(model.movieEntity.kinopoiskId) ?? 0))
-                        .padding(.top)
+                    if !isCustomMovie {
+                        StaffList(model: StaffViewModel(id: Int(model.movieEntity.kinopoiskId) ?? 0))
+                            .padding(.top)
+                    }
                 }
                 .scrollIndicators(.hidden)
                 .padding()

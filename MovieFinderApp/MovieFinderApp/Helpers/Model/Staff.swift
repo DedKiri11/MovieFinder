@@ -15,7 +15,7 @@ struct Staff: Codable, Identifiable, Hashable {
     var posterUrl: String?
     var professionText: String?
     var professionKey: String?
-    
+
     static let `default` = Staff(id: 1,
                                  nameRu: "Винс Гиллиган",
                                  nameEn: "Vince Gilligan",
@@ -23,11 +23,11 @@ struct Staff: Codable, Identifiable, Hashable {
                                  posterUrl: "https://st.kp.yandex.net/images/actor/66539.jpg",
                                  professionText: "Режиссеры",
                                  professionKey: "DIRECTOR")
-    
+
     static func == (lhs: Staff, rhs: Staff) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id = "staffId"
         case nameRu = "nameRu"
@@ -37,7 +37,7 @@ struct Staff: Codable, Identifiable, Hashable {
         case professionText = "professionText"
         case professionKey = "professionKey"
     }
-    
+
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

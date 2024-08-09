@@ -17,7 +17,7 @@ struct Movie: Codable, Identifiable, Hashable {
     var nameOriginal: String?
     var genres: [Genre]?
     var posterUrl: String
-    var posterUrlPreview: String
+    var posterUrlPreview: String = ""
     var description: String?
     var year: Int
     var isFavorite: Bool = false

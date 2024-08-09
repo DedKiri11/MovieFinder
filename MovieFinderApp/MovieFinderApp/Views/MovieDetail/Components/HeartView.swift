@@ -28,7 +28,7 @@ struct HeartView: View {
                     }
                 }
         }
-        
+
         .padding(.leading)
     }
 }

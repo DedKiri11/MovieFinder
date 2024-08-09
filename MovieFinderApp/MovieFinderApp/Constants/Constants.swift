@@ -70,4 +70,10 @@ struct Constants {
     // MARK: HeartView
     static let heartWidth = 70.0
     static let heartHeight = 70.0
+    // MARK: EditView
+    static let textEditorHeight = 200.0
+    // MARK: EditPosterView
+    static let imageHeightEditView = 300.0
+    static let imageWidthEditView = 300.0
+    
 }

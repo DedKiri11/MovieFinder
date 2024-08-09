@@ -34,6 +34,24 @@ final class Injection {
         container.register(StaffDataService.self) { _ in
             return StaffDataService()
         }
+        container.register(CustomMovieRepository.self) { _ in
+            return CustomMovieRepository()
+        }
+        container.register(MovieViewModel.self) { _ in
+            MovieViewModel(service: Injection.shared.container.resolve(MovieDataService.self)!)
+        }
+        container.register(FavoriteViewModel.self) { _ in
+            FavoriteViewModel(repository: Injection.shared.container.resolve(Repository.self)!)
+        }
+        container.register(ProfileViewModel.self) { _ in
+            ProfileViewModel()
+        }
+        container.register(EditViewModel.self) { _ in
+            EditViewModel(repository: Injection.shared.container.resolve(CustomMovieRepository.self)!)
+        }
+        container.register(CustomMovieViewModel.self) { _ in
+            CustomMovieViewModel(repository: Injection.shared.container.resolve(CustomMovieRepository.self)!)
+        }
         return container
     }
 }

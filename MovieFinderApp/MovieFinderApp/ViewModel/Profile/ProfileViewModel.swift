@@ -13,7 +13,7 @@ final class ProfileViewModel: ObservableObject {
     @Published var isLogin = false
     @Published var fullName = ""
     @Published var image: String?
-    
+
     init() {
         if let token = UserDefaults.standard.value(forKey: "userToken") as? String {
             isLogin = true
@@ -26,11 +26,11 @@ final class ProfileViewModel: ObservableObject {
             self.image = image
         }
     }
-    
+
     func signInWithGoogle() {
         let signInConfig = GIDConfiguration(clientID: "553584180125-dqdatdj8t95g77brb1389grb12gb3el1.apps.googleusercontent.com")
         GIDSignIn.sharedInstance.configuration = signInConfig
-        
+
         GIDSignIn.sharedInstance.signIn(withPresenting: ApplicationUtility.rootViewController) { signInResult, err in
             guard err == nil else { return }
             guard let signInResult = signInResult else { return }
@@ -54,7 +54,7 @@ final class ProfileViewModel: ObservableObject {
         }
         self.isLogin = true
     }
-    
+
     func signOut() {
         GIDSignIn.sharedInstance.signOut()
         UserDefaults.standard.removeObject(forKey: "userToken")

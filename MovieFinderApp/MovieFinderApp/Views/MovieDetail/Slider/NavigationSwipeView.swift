@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct NavigationSwipeView: View {
     @State var rightData = SliderData(side: .right)
     @State var isShare = false
@@ -16,13 +14,13 @@ struct NavigationSwipeView: View {
     @State var sliderOffset: CGFloat = 0
     var color = Color.blue
     var movie: Movie
-    
+
     var body: some View {
         ZStack {
             slider(data: $rightData)
         }
     }
-    
+
     func slider(data: Binding<SliderData>) -> some View {
         let value = data.wrappedValue
         return ZStack {
@@ -32,7 +30,7 @@ struct NavigationSwipeView: View {
         .zIndex(topSlider == value.side ? 1 : 0)
         .offset(x: value.side == .left ? -sliderOffset : sliderOffset)
     }
-    
+
     func button(data: SliderData) -> some View {
         return ZStack {
             ShareButtonView(movie: movie, isActive: $isShare)
@@ -42,7 +40,7 @@ struct NavigationSwipeView: View {
         .offset(data.buttonOffset)
         .opacity(data.buttonOpacity)
     }
-    
+
     func wave(data: Binding<SliderData>) -> some View {
         let gesture = DragGesture().onChanged {
             self.topSlider = data.wrappedValue.side
@@ -54,7 +52,7 @@ struct NavigationSwipeView: View {
                         data.wrappedValue = data.wrappedValue.initial()
                     }
                 } else {
-                    
+
                     self.swipe(data: data)
                     isShare = true
                 }
@@ -67,21 +65,21 @@ struct NavigationSwipeView: View {
         return WaveView(data: data.wrappedValue).gesture(gesture)
             .foregroundColor(color)
     }
-    
+
     private func swipe(data: Binding<SliderData>) {
         withAnimation {
             data.wrappedValue = data.wrappedValue.final()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
             self.rightData = self.rightData.initial()
-            
+
             self.sliderOffset = 100
             withAnimation(.spring(dampingFraction: 0.5)) {
                 self.sliderOffset = 0
             }
         }
     }
-    
+
 }
 
 #Preview {

@@ -31,6 +31,6 @@ struct ListView: View {
                 }
             }
         }
-        
+
     }
 }
