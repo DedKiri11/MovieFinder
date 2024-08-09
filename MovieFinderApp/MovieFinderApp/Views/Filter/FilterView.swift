@@ -12,6 +12,8 @@ struct FilterView: View {
     @State var selectedYear: Int = 0
     @State private var showPicker = false
     @Binding var filterQuery: [String : String]
+    @State var countrySearch: String = ""
+    @State var genreSearch: String = ""
     @StateObject var model = FilterViewModel()
     var body: some View {
         VStack {
@@ -21,16 +23,24 @@ struct FilterView: View {
                     .frame(width: Constants.cancellButtonSizeFilterView, height: Constants.cancellButtonSizeFilterView)
             }
             VStack(alignment: .leading) {
-                Text("Country")
-                    .font(.headline)
-                FilterButtonList(currentId: $model.selectedCountryId, filterNames: model.countries
+                HStack {
+                    Text("Country")
+                        .font(.headline)
+                    TextField("Search country", text: $countrySearch)
+                }
+                var countries = countrySearch.isEmpty ? model.countries : model.getSearchedCountries(query: countrySearch)
+                FilterButtonList(currentId: $model.selectedCountryId, filterNames: countries
                     .map { country in
                         return (country.country ?? Constants.emptyString, country.id)
                     }
                 )
-                Text("Genre")
-                    .font(.headline)
-                FilterButtonList(currentId: $model.selectedGenreId, filterNames: model.genres
+                HStack {
+                    Text("Genre")
+                        .font(.headline)
+                    TextField("Search genre", text: $genreSearch)
+                }
+                let genres = genreSearch.isEmpty ? model.genres : model.getSearchedGenres(query: genreSearch)
+                FilterButtonList(currentId: $model.selectedGenreId, filterNames: genres
                     .map { genre in
                         return (genre.genre ?? Constants.emptyString, genre.id)
                     }

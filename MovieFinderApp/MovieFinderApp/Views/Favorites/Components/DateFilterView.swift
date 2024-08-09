@@ -27,7 +27,7 @@ struct DateFilterView: View {
         .onTapGesture {
             isLatest.toggle()
             action()
-            withAnimation(.bouncy(duration: 0.5)) {
+            withAnimation(.spring(duration: 0.5)) {
                 rotation += 180
             }
         }

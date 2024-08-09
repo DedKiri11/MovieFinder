@@ -47,6 +47,13 @@
 		FD86FB512C6355AD006AA1CF /* FilterActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD86FB502C6355AD006AA1CF /* FilterActionButton.swift */; };
 		FD8B5A0E2C64F5000012F001 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A0D2C64F5000012F001 /* ListView.swift */; };
 		FD8B5A102C650D430012F001 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A0F2C650D430012F001 /* ShareView.swift */; };
+		FD8B5A122C65EBE30012F001 /* CustomMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A112C65EBE30012F001 /* CustomMovieList.swift */; };
+		FD8B5A152C65EC640012F001 /* CustomMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A142C65EC640012F001 /* CustomMovieViewModel.swift */; };
+		FD8B5A182C65EE2F0012F001 /* EditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A172C65EE2F0012F001 /* EditCardView.swift */; };
+		FD8B5A1A2C65F1610012F001 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A192C65F1610012F001 /* EditView.swift */; };
+		FD8B5A1C2C65F2940012F001 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A1B2C65F2940012F001 /* ImagePicker.swift */; };
+		FD8B5A1E2C65F5670012F001 /* EditPosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A1D2C65F5670012F001 /* EditPosterView.swift */; };
+		FD8B5A202C65F6B40012F001 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8B5A1F2C65F6B40012F001 /* EditViewModel.swift */; };
 		FD8D42872C5118DB000E5C6B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FD8D42862C5118DB000E5C6B /* RealmSwift */; };
 		FD8D42882C51192B000E5C6B /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = FD8D42862C5118DB000E5C6B /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD8D428D2C5122DA000E5C6B /* ProfileView.swift */; };
@@ -128,6 +135,13 @@
 		FD86FB502C6355AD006AA1CF /* FilterActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterActionButton.swift; sourceTree = "<group>"; };
 		FD8B5A0D2C64F5000012F001 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		FD8B5A0F2C650D430012F001 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		FD8B5A112C65EBE30012F001 /* CustomMovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovieList.swift; sourceTree = "<group>"; };
+		FD8B5A142C65EC640012F001 /* CustomMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMovieViewModel.swift; sourceTree = "<group>"; };
+		FD8B5A172C65EE2F0012F001 /* EditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCardView.swift; sourceTree = "<group>"; };
+		FD8B5A192C65F1610012F001 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		FD8B5A1B2C65F2940012F001 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FD8B5A1D2C65F5670012F001 /* EditPosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPosterView.swift; sourceTree = "<group>"; };
+		FD8B5A1F2C65F6B40012F001 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		FD8D428D2C5122DA000E5C6B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FD8D42972C525BCC000E5C6B /* AuthorizationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationButton.swift; sourceTree = "<group>"; };
 		FD9012432C4E9E4D003465C1 /* MovieFinderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFinderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +302,8 @@
 				FD7661B92C61F7A300163B9C /* ShareButtonViewModel.swift */,
 				FD7661C32C622D9100163B9C /* StaffViewModel.swift */,
 				FD7661CF2C6260CF00163B9C /* FilterViewModel.swift */,
+				FD8B5A142C65EC640012F001 /* CustomMovieViewModel.swift */,
+				FD8B5A1F2C65F6B40012F001 /* EditViewModel.swift */,
 			);
 			name = ViewModel;
 			path = MovieFinderApp/ViewModel;
@@ -305,6 +321,7 @@
 		FD835D072C4EA702002F731F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FD8B5A132C65EBF30012F001 /* CustomMovie */,
 				FD9EBC762C64CF2C00313E34 /* Components */,
 				FD7661CE2C62540B00163B9C /* Filter */,
 				FD7661BD2C622D1E00163B9C /* Staff */,
@@ -314,6 +331,26 @@
 				FD8D428A2C51227F000E5C6B /* MovieList */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FD8B5A132C65EBF30012F001 /* CustomMovie */ = {
+			isa = PBXGroup;
+			children = (
+				FD8B5A162C65ED2E0012F001 /* Components */,
+				FD8B5A112C65EBE30012F001 /* CustomMovieList.swift */,
+			);
+			path = CustomMovie;
+			sourceTree = "<group>";
+		};
+		FD8B5A162C65ED2E0012F001 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FD8B5A172C65EE2F0012F001 /* EditCardView.swift */,
+				FD8B5A1B2C65F2940012F001 /* ImagePicker.swift */,
+				FD8B5A1D2C65F5670012F001 /* EditPosterView.swift */,
+				FD8B5A192C65F1610012F001 /* EditView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FD8D428A2C51227F000E5C6B /* MovieList */ = {
@@ -602,6 +639,7 @@
 				FD7661D42C62619A00163B9C /* CountryDTO.swift in Sources */,
 				FD7661D22C62613100163B9C /* GenreDTO.swift in Sources */,
 				FD7661C42C622D9100163B9C /* StaffViewModel.swift in Sources */,
+				FD8B5A1C2C65F2940012F001 /* ImagePicker.swift in Sources */,
 				FDCA6CE72C58E9910037F6A3 /* Constants.swift in Sources */,
 				FD9EBC6E2C63910B00313E34 /* CancelButton.swift in Sources */,
 				FD8D42982C525BCC000E5C6B /* AuthorizationButton.swift in Sources */,
@@ -611,9 +649,11 @@
 				FD7661BC2C62296400163B9C /* Staff.swift in Sources */,
 				FD835D022C4EA219002F731F /* Movie.swift in Sources */,
 				FD7661D62C62632600163B9C /* FiltersDTO.swift in Sources */,
+				FD8B5A152C65EC640012F001 /* CustomMovieViewModel.swift in Sources */,
 				FD835CF82C4E9F76002F731F /* APIHelper.swift in Sources */,
 				FD9033CA2C5BB91D007C98AF /* FavoritesList.swift in Sources */,
 				FD5B48CB2C5A7143002FF763 /* MovieEntity.swift in Sources */,
+				FD8B5A1A2C65F1610012F001 /* EditView.swift in Sources */,
 				FD5B48CE2C5A7657002FF763 /* MovieRepository.swift in Sources */,
 				FD835CFD2C4EA1DC002F731F /* MovieViewModel.swift in Sources */,
 				FD3B1D862C53A37900817857 /* MovieDataService.swift in Sources */,
@@ -625,9 +665,11 @@
 				FD7661C62C62347500163B9C /* StaffDataService.swift in Sources */,
 				FD7661B62C61082900163B9C /* DateFilterView.swift in Sources */,
 				FD9033CD2C5BB93F007C98AF /* FavoritesListTile.swift in Sources */,
+				FD8B5A122C65EBE30012F001 /* CustomMovieList.swift in Sources */,
 				FD9EBC752C64A7BF00313E34 /* WaveView.swift in Sources */,
 				FD9033C52C5B8574007C98AF /* FavoriteViewModel.swift in Sources */,
 				FD5B48D02C5A82C8002FF763 /* UserToken.swift in Sources */,
+				FD8B5A202C65F6B40012F001 /* EditViewModel.swift in Sources */,
 				FD835D092C4EA726002F731F /* MovieListCard.swift in Sources */,
 				FD8B5A102C650D430012F001 /* ShareView.swift in Sources */,
 				FD835D062C4EA491002F731F /* MovieDTO.swift in Sources */,
@@ -638,6 +680,7 @@
 				FD835D0B2C4EA733002F731F /* MovieList.swift in Sources */,
 				FD9012472C4E9E4D003465C1 /* MovieFinderApp.swift in Sources */,
 				FD8D428E2C5122DA000E5C6B /* ProfileView.swift in Sources */,
+				FD8B5A182C65EE2F0012F001 /* EditCardView.swift in Sources */,
 				FD53781E2C4FE7EF009E1D5A /* MovieDetail.swift in Sources */,
 				FD8B5A0E2C64F5000012F001 /* ListView.swift in Sources */,
 				FDCA6CEC2C5926660037F6A3 /* SearchBar.swift in Sources */,
@@ -647,6 +690,7 @@
 				FD5B48C62C5A64EC002FF763 /* APIConstants.swift in Sources */,
 				FD3B1D892C53B22C00817857 /* Injection.swift in Sources */,
 				FDCA6CE92C58F57C0037F6A3 /* ProfileCard.swift in Sources */,
+				FD8B5A1E2C65F5670012F001 /* EditPosterView.swift in Sources */,
 				FD4758492C57C9FF0048D05E /* AppDelegate.swift in Sources */,
 				FD7661D02C6260CF00163B9C /* FilterViewModel.swift in Sources */,
 			);

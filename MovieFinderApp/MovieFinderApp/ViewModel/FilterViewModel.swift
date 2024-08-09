@@ -53,4 +53,12 @@ class FilterViewModel: ObservableObject {
         }
         return query
     }
+    
+    func getSearchedCountries(query: String) -> [CountryDTO] {
+        return self.countries.filter { $0.country!.localizedCaseInsensitiveContains(query) }
+    }
+    
+    func getSearchedGenres(query: String) -> [GenreDTO] {
+        return self.genres.filter { $0.genre!.localizedCaseInsensitiveContains(query) }
+    }
 }
